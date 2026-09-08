@@ -1,78 +1,137 @@
 @extends('layouts.store')
 
-@section('title', 'Booking '.$booking->code)
+@section('title', 'Status Booking ' . $booking->code . ' — SewaDrone')
 
 @section('content')
-    <div class="mx-auto max-w-3xl px-4 py-10">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <a href="{{ route('home') }}" class="text-xs uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1.5 mb-6">
+            <span>&larr;</span> Kembali ke Beranda
+        </a>
+
         @if (session('status'))
-            <div class="mb-4 rounded-lg border border-[#34D399]/30 bg-[#34D399]/10 px-4 py-3 text-sm text-[#34D399]">{{ session('status') }}</div>
+            <div class="mb-6 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-3 text-xs text-emerald-400 flex items-center gap-2">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                <span>{{ session('status') }}</span>
+            </div>
         @endif
 
-        <h1 class="text-2xl font-bold">Booking diterima</h1>
-
-        <x-card class="mt-6 p-6">
-            <div class="flex items-center justify-between gap-4">
+        <div class="dji-card rounded-2xl p-6 sm:p-10">
+            <!-- Order Status Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
                 <div>
-                    <span class="text-xs text-[#94A3B8]">Kode booking</span>
-                    <div class="font-mono text-2xl font-bold tracking-wider">{{ $booking->code }}</div>
+                    <span class="text-[10px] tracking-widest text-sky-400 uppercase font-bold block">Kode Reservasi Resmi</span>
+                    <div class="font-mono text-3xl font-extrabold text-white tracking-wider mt-1">{{ $booking->code }}</div>
                 </div>
-                <div class="text-right">
+                <div class="text-left sm:text-right">
                     <x-status :status="$booking->status" />
-                    @if ($booking->payments->where('status', 'settlement')->isNotEmpty())
-                        <div class="mt-1 text-xs text-[#94A3B8]">Lunas via {{ $booking->payments->firstWhere('status', 'settlement')->payment_type ?? 'midtrans' }}</div>
+                    @php $settled = $booking->payments->firstWhere('status', 'settlement'); @endphp
+                    @if ($settled)
+                        <span class="text-[11px] text-gray-400 block mt-1">Lunas via {{ strtoupper($settled->payment_type ?? 'QRIS') }}</span>
                     @endif
                 </div>
             </div>
 
-            <dl class="mt-6 space-y-2.5 text-sm border-t border-[#24334F] pt-5">
-                <div class="flex justify-between"><dt class="text-[#94A3B8]">Drone</dt><dd class="font-medium">{{ $booking->drone->name }}@if($booking->with_pilot) <span class="text-[#94A3B8]">+ pilot</span>@endif</dd></div>
-                <div class="flex justify-between"><dt class="text-[#94A3B8]">Periode</dt><dd class="font-medium">{{ $booking->start_date->translatedFormat('d M Y') }} — {{ $booking->end_date->translatedFormat('d M Y') }} ({{ $booking->days }} hari)</dd></div>
-                @if ($booking->delivery)<div class="flex justify-between"><dt class="text-[#94A3B8]">Layanan</dt><dd class="font-medium">Antar-jemput unit</dd></div>@endif
-                @if ((float) $booking->discount > 0)<div class="flex justify-between"><dt class="text-[#94A3B8]">Diskon</dt><dd class="font-medium text-[#34D399]">-Rp{{ number_format((float) $booking->discount, 0, ',', '.') }}</dd></div>@endif
-                <div class="flex justify-between border-t border-[#24334F] pt-3 text-base"><dt>Total</dt><dd><x-price :amount="$booking->total_price" class="text-xl" /></dd></div>
+            <!-- Booking Overview Details -->
+            <dl class="mt-6 space-y-3 text-xs border-b border-white/10 pb-6">
+                <div class="flex justify-between">
+                    <dt class="text-gray-400 uppercase tracking-wider">Unit Pesawat</dt>
+                    <dd class="text-white font-semibold">{{ $booking->drone->name }} @if($booking->with_pilot) <span class="text-sky-400">(Dengan Pilot)</span> @endif</dd>
+                </div>
+                <div class="flex justify-between">
+                    <dt class="text-gray-400 uppercase tracking-wider">Penyewa Terdaftar</dt>
+                    <dd class="text-white font-medium">{{ $booking->renter_name }} ({{ $booking->phone }})</dd>
+                </div>
+                <div class="flex justify-between">
+                    <dt class="text-gray-400 uppercase tracking-wider">Periode Penggunaan</dt>
+                    <dd class="text-white font-medium">{{ $booking->start_date->translatedFormat('d M Y') }} — {{ $booking->end_date->translatedFormat('d M Y') }} ({{ $booking->days }} Hari)</dd>
+                </div>
+                @if ($booking->delivery)
+                    <div class="flex justify-between">
+                        <dt class="text-gray-400 uppercase tracking-wider">Layanan Logistik</dt>
+                        <dd class="text-white font-medium">Antar-Jemput Lokasi</dd>
+                    </div>
+                @endif
+                @if ((float) $booking->discount > 0)
+                    <div class="flex justify-between">
+                        <dt class="text-gray-400 uppercase tracking-wider">Potongan Voucher</dt>
+                        <dd class="text-emerald-400 font-semibold">-Rp{{ number_format((float) $booking->discount, 0, ',', '.') }}</dd>
+                    </div>
+                @endif
+                <div class="flex justify-between pt-2 border-t border-white/5 text-sm">
+                    <dt class="text-white font-bold uppercase tracking-wider">Total Pembayaran</dt>
+                    <dd class="text-2xl font-extrabold text-sky-400 tracking-tight">Rp{{ number_format((float) $booking->total_price, 0, ',', '.') }}</dd>
+                </div>
             </dl>
 
-            <div class="mt-7">
+            <!-- Action Section -->
+            <div class="mt-8">
                 @if ($booking->status === 'pending')
-                    <x-btn id="pay-button" class="w-full">Bayar Sekarang — <x-price :amount="$booking->total_price" /></x-btn>
-                    <p id="pay-error" class="mt-2 text-xs text-[#F87171] hidden"></p>
+                    <button id="pay-button" class="w-full rounded-lg bg-sky-400 hover:bg-sky-300 text-black font-bold py-4 px-6 text-xs uppercase tracking-wider transition shadow-lg shadow-sky-500/20 flex items-center justify-center gap-2">
+                        <span>Bayar Sekarang (Midtrans Snap)</span> &rarr;
+                    </button>
+                    <p id="pay-error" class="mt-3 text-xs text-red-400 text-center hidden"></p>
                 @elseif ($booking->status === 'confirmed' && $booking->invoice)
                     <a href="{{ route('invoice.show', $booking->invoice->number) }}" target="_blank"
-                       class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-[#38BDF8] px-4 py-2.5 text-sm font-semibold text-[#0B1220] hover:bg-[#0EA5E9] transition">
-                        Lihat / Unduh Invoice (PDF)
+                       class="w-full rounded-lg bg-white text-black hover:bg-sky-400 hover:text-black font-bold py-4 px-6 text-xs uppercase tracking-wider transition shadow-lg shadow-white/10 flex items-center justify-center gap-2">
+                        <span>Buka E-Invoice Resmi & Cetak PDF</span> ↗
                     </a>
                 @elseif ($booking->status === 'cancelled')
-                    <div class="rounded-lg border border-[#F87171]/30 bg-[#F87171]/10 px-4 py-3 text-sm text-[#F87171]">
-                        Booking dibatalkan (kedaluwarsa atau dibatalkan admin). Silakan buat booking baru.
+                    <div class="rounded-lg border border-red-500/20 bg-red-500/10 p-4 text-xs text-red-400 text-center">
+                        Reservasi ini telah dibatalkan karena batas waktu pembayaran habis (2 jam) atau pembatalan admin.
                     </div>
                 @else
-                    <div class="rounded-lg border border-[#24334F] px-4 py-3 text-sm text-[#94A3B8]">
-                        Status: <x-status :status="$booking->status" class="ml-1" />
+                    <div class="rounded-lg border border-white/10 p-4 text-xs text-gray-300 text-center">
+                        Status saat ini: <span class="text-white font-semibold uppercase">{{ $booking->status }}</span>
                     </div>
                 @endif
             </div>
 
-            <p class="mt-5 text-xs text-[#94A3B8] leading-relaxed">
-                Simpan kode booking Anda. Lacak status kapan saja di
-                <a href="{{ route('track.show', $booking->code) }}" class="text-[#38BDF8] hover:underline">{{ route('track.show', $booking->code) }}</a>.
-                Pickup: bawa KTP/SIM asli atau deposit sesuai kebijakan.
-            </p>
-        </x-card>
+            <!-- Public Track Link & Verification QR Info -->
+            <div class="mt-8 pt-6 border-t border-white/5 text-xs text-gray-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>
+                    Lacak perkembangan pesanan kapan saja di:
+                    <a href="{{ route('track.show', $booking->code) }}" class="text-sky-400 hover:underline block sm:inline font-mono">{{ route('track.show', $booking->code) }}</a>
+                </p>
+                @if ($booking->invoice)
+                    <span class="text-[11px] text-gray-500 font-mono">Invoice: {{ $booking->invoice->number }}</span>
+                @endif
+            </div>
+        </div>
 
-        @if ($booking->status === 'pending' && $booking->payments->first()?->snap_token)
+        @if ($booking->status === 'pending')
             <script src="https://app.sandbox.midtrans.com/snap/snap.js"
                     data-client-key="{{ config('midtrans.client_key') }}"></script>
             <script>
-                document.getElementById('pay-button').addEventListener('click', function () {
-                    snap.pay('{{ $booking->payments->first()->snap_token }}', {
-                        onSuccess: function () { location.reload(); },
-                        onPending: function () { location.reload(); },
-                        onError: function () {
-                            const el = document.getElementById('pay-error');
-                            el.textContent = 'Pembayaran gagal. Silakan coba lagi.';
-                            el.classList.remove('hidden');
-                        }
-                    });
+                document.getElementById('pay-button')?.addEventListener('click', function () {
+                    const btn = this;
+                    btn.disabled = true;
+                    btn.innerText = 'Memuat Gerbang Pembayaran...';
+
+                    fetch("{{ route('pay.create', $booking->code) }}")
+                        .then(r => {
+                            if (!r.ok) throw new Error('Gagal mendapatkan token transaksi Midtrans');
+                            return r.json();
+                        })
+                        .then(data => {
+                            btn.disabled = false;
+                            btn.innerText = 'Bayar Sekarang (Midtrans Snap) →';
+                            snap.pay(data.token, {
+                                onSuccess: function () { location.reload(); },
+                                onPending: function () { location.reload(); },
+                                onError: function () {
+                                    const err = document.getElementById('pay-error');
+                                    err.textContent = 'Pembayaran dibatalkan atau mengalami kegagalan teknis.';
+                                    err.classList.remove('hidden');
+                                }
+                            });
+                        })
+                        .catch(e => {
+                            btn.disabled = false;
+                            btn.innerText = 'Coba Lagi Pembayaran';
+                            const err = document.getElementById('pay-error');
+                            err.textContent = e.message;
+                            err.classList.remove('hidden');
+                        });
                 });
             </script>
         @endif

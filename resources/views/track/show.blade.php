@@ -1,69 +1,89 @@
 @extends('layouts.store')
 
-@section('title', 'Lacak '.$booking->code)
+@section('title', 'Lacak Reservasi ' . $booking->code . ' — SewaDrone')
 
 @section('content')
-    <div class="mx-auto max-w-2xl px-4 py-10">
-        <h1 class="text-2xl font-bold">Status booking</h1>
-
-        <x-card class="mt-6 p-6">
-            <div class="flex items-center justify-between">
-                <span class="font-mono text-2xl font-bold tracking-wider">{{ $booking->code }}</span>
-                <x-status :status="$booking->status" />
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <div class="mb-8 border-b border-white/10 pb-6 flex items-end justify-between">
+            <div>
+                <span class="text-xs uppercase tracking-[0.2em] text-sky-400 font-bold block mb-1">Status Pelacakan Pesanan</span>
+                <h1 class="text-3xl font-extrabold text-white tracking-tight uppercase">TIMELINE RESERVASI</h1>
             </div>
+            <div class="font-mono text-xl font-bold text-white bg-white/5 border border-white/10 px-3.5 py-1.5 rounded">
+                {{ $booking->code }}
+            </div>
+        </div>
 
-            <div class="mt-3">
-                @php $paid = $booking->payments->firstWhere('status', 'settlement'); @endphp
-                @if ($paid)
-                    <x-status status="confirmed" /> <span class="text-xs text-[#94A3B8] ml-2">Lunas via {{ $paid->payment_type ?? 'midtrans' }}</span>
-                @elseif ($booking->payments->isNotEmpty())
-                    <x-status :status="$booking->payments->first()->status === 'expire' ? 'cancelled' : 'pending'" />
-                    <span class="text-xs text-[#94A3B8] ml-2">Menunggu pembayaran</span>
-                @else
+        <div class="dji-card rounded-2xl p-6 sm:p-10">
+            <!-- Header Summary -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/10 pb-6">
+                <div>
+                    <h3 class="text-xl font-bold text-white">{{ $booking->drone->name }}</h3>
+                    <p class="text-xs text-gray-400 mt-0.5">{{ $booking->days }} Hari Masa Sewa · {{ $booking->start_date->translatedFormat('d M Y') }} s/d {{ $booking->end_date->translatedFormat('d M Y') }}</p>
+                </div>
+                <div class="text-left sm:text-right">
                     <x-status :status="$booking->status" />
-                @endif
+                    @php $paid = $booking->payments->firstWhere('status', 'settlement'); @endphp
+                    @if ($paid)
+                        <span class="text-[11px] text-gray-400 block mt-1">Lunas: {{ strtoupper($paid->payment_type ?? 'QRIS') }}</span>
+                    @endif
+                </div>
             </div>
 
-            <ol class="mt-7 space-y-0 border-l border-[#24334F] ml-2">
-                @php
-                    $steps = [
-                        ['Booking dibuat', $booking->created_at, true],
-                        ['Dibayar', $paid?->updated_at, $paid !== null],
-                        ['Pickup / mulai sewa', $booking->start_date, $booking->status !== 'pending'],
-                        ['Kembali / selesai', $booking->end_date, in_array($booking->status, ['completed'])],
-                    ];
-                    $states = ['done', 'done', $booking->status === 'active' ? 'now' : 'up', 'up'];
-                @endphp
-                @foreach ($steps as $i => [$label, $when, $done])
+            <!-- Modern Technical Milestone Timeline -->
+            <div class="my-8">
+                <ol class="space-y-6 border-l-2 border-white/10 ml-3">
                     @php
-                        $dot = $done ? 'bg-[#34D399]' : ($i === 2 && $booking->status === 'active' ? 'bg-[#38BDF8] animate-pulse' : 'bg-[#24334F]');
-                        $txt = $done || $i === 2 && $booking->status === 'active' ? 'text-[#F1F5F9]' : 'text-[#94A3B8]';
+                        $steps = [
+                            ['Pemesanan Dibuat', $booking->created_at, true, 'Form reservasi berhasil dikirimkan oleh penyewa.'],
+                            ['Pembayaran Terverifikasi', $paid?->updated_at, $paid !== null, 'Dana diverifikasi otomatis oleh sistem Midtrans.'],
+                            ['Pengambilan & Inspeksi Unit', $booking->start_date, in_array($booking->status, ['active', 'completed']), 'Pengecekan fisik, deposit/KTP, dan serah terima unit di lokasi.'],
+                            ['Pengembalian & Selesai', $booking->end_date, $booking->status === 'completed', 'Unit kembali dalam kondisi normal dan masa sewa ditutup.'],
+                        ];
                     @endphp
-                    <li class="pl-5 pb-5 -ml-[5px] relative">
-                        <span class="absolute left-0 top-1 h-2.5 w-2.5 rounded-full {{ $dot }}"></span>
-                        <span class="text-sm font-medium {{ $txt }}">{{ $label }}</span>
-                        <span class="block text-xs text-[#94A3B8]">
-                            @if ($when instanceof \Carbon\CarbonInterface)
-                                {{ $when->translatedFormat('d M Y') }}@if($label === 'Dibayar') , {{ $when->format('H:i') }}@endif
-                            @else
-                                —
-                            @endif
-                        </span>
-                    </li>
-                @endforeach
-            </ol>
 
-            <dl class="mt-4 space-y-2 text-sm border-t border-[#24334F] pt-5">
-                <div class="flex justify-between"><dt class="text-[#94A3B8]">Drone</dt><dd class="font-medium">{{ $booking->drone->name }}</dd></div>
-                <div class="flex justify-between"><dt class="text-[#94A3B8]">Periode</dt><dd class="font-medium">{{ $booking->days }} hari</dd></div>
-                <div class="flex justify-between"><dt class="text-[#94A3B8]">Total</dt><dd><x-price :amount="$booking->total_price" /></dd></div>
-            </dl>
+                    @foreach ($steps as $i => [$label, $when, $done, $desc])
+                        @php
+                            $isActiveStep = ($i === 2 && $booking->status === 'active');
+                            $bulletColor = $done ? 'bg-sky-400 ring-4 ring-sky-500/20' : ($isActiveStep ? 'bg-emerald-400 ring-4 ring-emerald-500/30' : 'bg-gray-700');
+                        @endphp
+                        <li class="pl-6 relative">
+                            <span class="absolute -left-[9px] top-1 h-4 w-4 rounded-full {{ $bulletColor }} transition duration-300"></span>
+                            <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+                                <h4 class="text-sm font-bold {{ $done || $isActiveStep ? 'text-white' : 'text-gray-500' }} tracking-wide">{{ $label }}</h4>
+                                <span class="text-[11px] font-mono {{ $done ? 'text-sky-400' : 'text-gray-500' }}">
+                                    @if ($when instanceof \Carbon\CarbonInterface)
+                                        {{ $when->translatedFormat('d M Y, H:i') }} WIB
+                                    @else
+                                        —
+                                    @endif
+                                </span>
+                            </div>
+                            <p class="text-xs text-gray-400 mt-1 leading-relaxed">{{ $desc }}</p>
+                        </li>
+                    @endforeach
+                </ol>
+            </div>
 
-            @if ($booking->invoice && $booking->status !== 'pending')
-                <a href="{{ route('invoice.show', $booking->invoice->number) }}" target="_blank" class="mt-6 inline-block text-sm font-medium text-[#38BDF8] underline-offset-4 hover:underline">
-                    Lihat invoice &rarr;
-                </a>
-            @endif
-        </x-card>
+            <!-- Booking Highlights & Actions -->
+            <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-xs text-gray-400">
+                    Total Nilai: <span class="text-base font-bold text-white ml-1">Rp{{ number_format((float) $booking->total_price, 0, ',', '.') }}</span>
+                </div>
+
+                <div class="flex gap-3 w-full sm:w-auto">
+                    @if ($booking->invoice)
+                        <a href="{{ route('invoice.show', $booking->invoice->number) }}" target="_blank"
+                           class="flex-1 sm:flex-none text-center rounded bg-white text-black hover:bg-sky-400 font-semibold px-4 py-2 text-xs uppercase tracking-wider transition">
+                            Buka E-Invoice Resmi ↗
+                        </a>
+                    @endif
+                    <a href="https://wa.me/{{ config('services.wa.admin_number') }}" target="_blank"
+                       class="flex-1 sm:flex-none text-center rounded border border-white/15 hover:border-white text-white px-4 py-2 text-xs uppercase tracking-wider transition">
+                        Hubungi Admin
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

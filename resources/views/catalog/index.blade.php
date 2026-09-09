@@ -98,7 +98,7 @@
                         <div class="my-8 h-48 rounded-lg bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 flex items-center justify-center relative overflow-hidden group">
                             <div class="absolute inset-0 bg-sky-500/5 opacity-0 group-hover:opacity-100 transition duration-300"></div>
                             @if ($drone->image_path)
-                                <img src="{{ asset('storage/'.$drone->image_path) }}" alt="{{ $drone->name }}" class="h-full w-full object-cover">
+                                <img src="{{ str_starts_with($drone->image_path, 'http') ? $drone->image_path : asset('storage/'.$drone->image_path) }}" alt="{{ $drone->name }}" class="h-full w-full object-cover">
                             @else
                                 <!-- Technical Wireframe Drone Emblem -->
                                 <div class="text-center">

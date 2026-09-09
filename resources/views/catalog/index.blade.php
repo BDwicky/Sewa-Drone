@@ -10,71 +10,82 @@
         $heroVideo = "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4";
     @endphp
 
-    <!-- DJI Hero Cinematic Section (Enhanced Height & Generous Vertical Breathing Room) -->
-    <section class="relative min-h-[96vh] flex items-center justify-center overflow-hidden border-b border-white/10 bg-[#06080D]">
-        <!-- Fullscreen Autoplay Video Background (Dolly / Aerial Tracking Shot) -->
-        <div class="absolute inset-0 z-0 overflow-hidden">
-            <video class="w-full h-full object-cover scale-105 filter brightness-[0.42] contrast-125 transition duration-1000" autoplay loop muted playsinline>
+    <!-- DJI Official Style Full-Screen Hero Banner Section (Persis seperti dji.com/id) -->
+    <section class="relative h-[92vh] sm:h-[95vh] w-full flex items-center justify-center overflow-hidden border-b border-white/10 bg-black">
+        <!-- Background 4K Drone Footage (Autoplay, Loop, Muted, Seamless Dolly Shot) -->
+        <div class="absolute inset-0 z-0">
+            <video class="w-full h-full object-cover scale-105 filter brightness-[0.55] contrast-110 transition duration-1000" autoplay loop muted playsinline>
                 <source src="{{ $heroVideo }}" type="video/mp4">
             </video>
-            <!-- Vignette & Dark Atmospheric Gradients -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#06080D] via-[#06080D]/50 to-[#06080D]/85"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.16)_0%,rgba(6,8,13,0.8)_85%)]"></div>
+            <!-- Cinematic Vignette & Gradient Overlays (Authentic DJI Lighting) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#06080D] via-transparent to-black/60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[#06080D]"></div>
         </div>
 
-        <!-- Hero Content with Ample Spacing -->
-        <div class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-32 sm:py-44 text-center flex flex-col items-center">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-400/40 bg-black/60 backdrop-blur-md text-sky-400 text-xs tracking-wider uppercase mb-10 font-medium shadow-xl shadow-sky-500/10">
-                <span class="h-2 w-2 rounded-full bg-sky-400 animate-ping"></span>
-                <span>DJI Flagship Fleet Rental</span>
-                <span class="text-gray-500 font-mono">/</span>
-                <span class="text-gray-300">Live 4K Cinema Ready</span>
+        <!-- Hero Content (Structured exactly like DJI's banner-text & banner-btn-box) -->
+        <div class="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 text-center flex flex-col items-center justify-center pt-8">
+            <!-- Eyebrow text -->
+            <div class="text-xs sm:text-sm uppercase tracking-[0.25em] text-gray-200 font-medium mb-3 drop-shadow-md">
+                Armada Rental Drone Kamera Flagship
             </div>
 
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white uppercase leading-[1.1] drop-shadow-2xl max-w-4xl">
-                TANGKAP SETIAP SUDUT<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-white to-sky-200">SINEMATIK UDARA</span>
+            <!-- Main Product Branding / Headline -->
+            <h1 class="text-4xl sm:text-7xl md:text-8xl font-extrabold tracking-tight text-white uppercase leading-none drop-shadow-2xl">
+                SEWA DRONE DJI
             </h1>
 
-            <p class="mt-8 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed drop-shadow px-4">
-                Penyewaan armada drone DJI resmi terlengkap di Indonesia. Dilengkapi kontroler DJI RC, multi-baterai, filter sinematik, serta sistem pemesanan full-otomatis dengan Midtrans &amp; e-invoice instan.
+            <!-- DJI Signature Slogan -->
+            <h2 class="text-lg sm:text-2xl md:text-3xl font-light tracking-wide text-gray-200 mt-4 sm:mt-5 drop-shadow-md">
+                Chase the View. Tangkap Sudut Sinematik.
+            </h2>
+
+            <p class="mt-4 text-xs sm:text-sm text-gray-300 max-w-xl mx-auto font-light leading-relaxed drop-shadow">
+                Penyewaan resmi unit DJI Mini 4 Pro, Air 3S, Mavic 3 Pro &amp; Avata 2. Sistem booking anti-bentrok, pembayaran online otomatis, dan e-invoice resmi seketika.
             </p>
 
-            <!-- Quick Specs HUD Bar with Relaxed Padding -->
-            <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full max-w-3xl text-left border border-white/15 bg-black/65 backdrop-blur-md rounded-2xl p-6 sm:p-7 shadow-2xl">
-                <div class="hud-spec border-sky-400">
-                    <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">4K / 5.1K</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Hasselblad &amp; HDR</span>
-                </div>
-                <div class="hud-spec border-sky-400">
-                    <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">45 Menit</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Max Durasi Baterai</span>
-                </div>
-                <div class="hud-spec border-sky-400">
-                    <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">20 KM</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Transmisi O4 FHD</span>
-                </div>
-                <div class="hud-spec border-sky-400">
-                    <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">&lt; 249g</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Tersedia Bebas Izin</span>
-                </div>
+            <!-- DJI Official Style Action Button Box -->
+            <div class="mt-8 sm:mt-10 flex items-center justify-center gap-8 sm:gap-10">
+                <a href="#fleet" class="group inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-white hover:text-sky-400 transition drop-shadow">
+                    <span>Lihat Armada</span>
+                    <span class="inline-block transform group-hover:translate-x-1 transition text-sky-400 font-bold">&gt;</span>
+                </a>
+                <a href="{{ route('pages.kebijakan') }}" class="group inline-flex items-center gap-1.5 text-sm sm:text-base font-semibold text-white hover:text-sky-400 transition drop-shadow">
+                    <span>Syarat &amp; Kebijakan</span>
+                    <span class="inline-block transform group-hover:translate-x-1 transition text-sky-400 font-bold">&gt;</span>
+                </a>
             </div>
 
-            <!-- Hero Action Buttons with Balanced Margin & Padding -->
-            <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
-                <a href="#fleet" class="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 hover:bg-sky-300 text-black font-extrabold text-xs uppercase tracking-wider px-7 py-4 transition shadow-lg shadow-sky-400/25 hover:shadow-sky-400/40 transform hover:-translate-y-0.5 min-w-[180px]">
-                    <span>Jelajahi Armada</span>
-                    <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
-                <a href="{{ route('pages.kebijakan') }}" class="inline-flex items-center justify-center rounded-xl border border-white/20 hover:border-white text-white text-xs uppercase tracking-wider px-7 py-4 transition backdrop-blur-md bg-black/40 hover:bg-white/10 min-w-[180px]">
-                    Syarat &amp; Tata Cara
-                </a>
+            <!-- Key Quick Spec Badges (Clean Monochromatic HUD) -->
+            <div class="mt-12 sm:mt-16 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-[11px] sm:text-xs text-gray-300 font-medium">
+                <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                    <span>Sensor 4K / 5.1K Hasselblad</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                    <span>Durasi Terbang s/d 45 Menit</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                    <span>Transmisi Video O4 20 KM</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                    <span>Tersedia Unit Bebas Izin &lt;249g</span>
+                </div>
             </div>
         </div>
+
+        <!-- Down Arrow Indicator -->
+        <a href="#fleet" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-gray-400 hover:text-white transition z-10 animate-bounce">
+            <svg class="h-5 w-5 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
     </section>
 
     <!-- Product Showcase Grid (Pilih Drone dan Kelengkapan Device - Pure Physical Hardware Photos) -->
-    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 border-b border-white/10 pb-8 gap-4">
             <div>

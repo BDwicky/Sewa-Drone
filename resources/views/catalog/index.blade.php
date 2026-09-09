@@ -199,39 +199,150 @@
         </div>
     </section>
 
-    <!-- DJI Professional Standards Showcase -->
-    <section class="border-t border-white/10 bg-[#080B11] py-20">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-14">
-                <span class="text-xs uppercase tracking-[0.2em] text-sky-400 font-bold block mb-2">Standard &amp; Keamanan</span>
-                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">STANDAR SERAH TERIMA ARMADA RESMI</h3>
+        <!-- DJI Professional Standards Showcase (Redesigned Cinematic Feature Banners) -->
+    <section class="border-t border-white/10 bg-gradient-to-b from-[#06080D] via-[#090D15] to-[#040609] py-24 relative overflow-hidden">
+        <!-- Subtle Grid & Radial Glow Background -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(56,189,248,0.06)_0%,transparent_60%)] pointer-events-none"></div>
+
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 border-b border-white/10 pb-8 gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 text-[11px] font-mono tracking-wider uppercase mb-3">
+                        <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                        Jaminan Kualitas Operasional
+                    </div>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">STANDAR LAYANAN ARMADA RESMI</h3>
+                </div>
+                <p class="text-xs sm:text-sm text-gray-400 max-w-md font-light leading-relaxed">
+                    Setiap unit melalui protokol inspeksi keselamatan dan integrasi sistem digital untuk kelancaran proyek penerbangan Anda.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="dji-card rounded-2xl p-7 text-left space-y-3">
-                    <span class="text-xs uppercase font-mono tracking-widest text-sky-400 font-bold">Standard 01</span>
-                    <h4 class="text-lg font-bold text-white tracking-tight">Kalibrasi Sensor 100%</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed font-light">
-                        Seluruh unit melalui uji sistem IMU, kompas digital, dan penyeimbang 3-axis gimbal sebelum diserahkan demi memastikan kestabilan bidikan video udara.
-                    </p>
+            <!-- Redesigned High-Impact Feature Cards (Asymmetric Layout with Visual Accents) -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Card 01: Pre-Flight Calibration (Featured Highlight) -->
+                <div class="group relative rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/60 border border-white/10 p-8 hover:border-sky-400/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-sky-500/20 transition duration-500"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="h-12 w-12 rounded-xl bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 group-hover:bg-sky-400 group-hover:text-black transition duration-300">
+                                <svg class="h-6 w-6 stroke-[1.8]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="9"/>
+                                    <path d="M12 3v18M3 12h18"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
+                            <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">Protocol // 01</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-sky-300 transition duration-200">
+                            Kalibrasi Sensor &amp; Gimbal 100%
+                        </h4>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-3 leading-relaxed font-light">
+                            Uji akurasi kompas digital, IMU dual-redundancy, dan balancing 3-axis gimbal dilakukan sebelum diserahkan demi rekaman video stabil tanpa micro-jitter.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span class="flex items-center gap-1.5 text-emerald-400">
+                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Pre-Flight Passed
+                        </span>
+                        <span>Zero Drift Testing</span>
+                    </div>
                 </div>
-                <div class="dji-card rounded-2xl p-7 text-left space-y-3">
-                    <span class="text-xs uppercase font-mono tracking-widest text-sky-400 font-bold">Standard 02</span>
-                    <h4 class="text-lg font-bold text-white tracking-tight">Kesehatan Baterai Terjamin</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed font-light">
-                        Baterai Intelligent Flight diperiksa secara berkala pada siklus pengisian sehat guna mencegah penurunan daya mendadak di tengah sesi produksi.
-                    </p>
+
+                <!-- Card 02: Intelligent Battery Management -->
+                <div class="group relative rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/60 border border-white/10 p-8 hover:border-sky-400/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-emerald-500/20 transition duration-500"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="h-12 w-12 rounded-xl bg-emerald-400/10 border border-emerald-400/30 flex items-center justify-center text-emerald-400 group-hover:bg-emerald-400 group-hover:text-black transition duration-300">
+                                <svg class="h-6 w-6 stroke-[1.8]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="2" y="7" width="16" height="10" rx="2"/>
+                                    <line x1="22" y1="11" x2="22" y2="13"/>
+                                    <line x1="6" y1="11" x2="6" y2="13"/>
+                                    <line x1="10" y1="11" x2="10" y2="13"/>
+                                </svg>
+                            </div>
+                            <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">Protocol // 02</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-emerald-300 transition duration-200">
+                            Baterai Sehat Siklus Terverifikasi
+                        </h4>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-3 leading-relaxed font-light">
+                            Setiap unit dilengkapi baterai Intelligent Flight dengan internal resistance rendah dan siklus sehat untuk daya tahan maksimum tanpa drop voltase tiba-tiba.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span class="flex items-center gap-1.5 text-emerald-400">
+                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Multi-Battery Pack
+                        </span>
+                        <span>Charging Hub Ready</span>
+                    </div>
                 </div>
-                <div class="dji-card rounded-2xl p-7 text-left space-y-3">
-                    <span class="text-xs uppercase font-mono tracking-widest text-sky-400 font-bold">Standard 03</span>
-                    <h4 class="text-lg font-bold text-white tracking-tight">E-Invoice &amp; Legalitas</h4>
-                    <p class="text-xs text-gray-400 leading-relaxed font-light">
-                        Pemesanan instan dengan bukti e-invoice resmi bertanda QR pelacakan serta dukungan kepatuhan regulasi DRONEID DJPU dan Permenhub PM 37/2020.
-                    </p>
+
+                <!-- Card 03: E-Invoice & Regulatory Compliance -->
+                <div class="group relative rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/60 border border-white/10 p-8 hover:border-sky-400/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-blue-500/20 transition duration-500"></div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="h-12 w-12 rounded-xl bg-blue-400/10 border border-blue-400/30 flex items-center justify-center text-blue-400 group-hover:bg-blue-400 group-hover:text-black transition duration-300">
+                                <svg class="h-6 w-6 stroke-[1.8]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10 9 9 9 8 9"/>
+                                </svg>
+                            </div>
+                            <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">Protocol // 03</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold text-white tracking-tight group-hover:text-blue-300 transition duration-200">
+                            E-Invoice Resmi &amp; QR Tracking
+                        </h4>
+                        <p class="text-xs sm:text-sm text-gray-400 mt-3 leading-relaxed font-light">
+                            Setelah pembayaran online Midtrans selesai, e-invoice resmi PDF terbit seketika dengan QR verifikasi untuk pelacakan status sewa dan validitas serah terima.
+                        </p>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-gray-400">
+                        <span class="flex items-center gap-1.5 text-sky-400">
+                            <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span> Instan PDF + QR
+                        </span>
+                        <span>DRONEID DJPU</span>
+                    </div>
                 </div>
+            </div>
+
+            <!-- Bottom Quality Statement Strip -->
+            <div class="mt-12 rounded-2xl border border-white/10 bg-white/[0.02] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-10 rounded-full bg-sky-400/10 border border-sky-400/30 flex items-center justify-center text-sky-400 shrink-0">
+                        <svg class="h-5 w-5 stroke-[2]" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="text-sm font-bold text-white">Butuh Dukungan Teknis atau Operator Drone Khusus?</h5>
+                        <p class="text-xs text-gray-400 mt-0.5">Konsultasikan kebutuhan produksi sinematik atau survei Anda langsung dengan tim kami.</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/{{ config('services.wa.admin_number') }}" target="_blank"
+                   class="inline-flex items-center gap-2 rounded-xl bg-white/10 hover:bg-sky-400 hover:text-black text-white px-6 py-3 text-xs font-bold uppercase tracking-wider transition shrink-0">
+                    <span>Hubungi Tim Teknis</span>
+                    <svg class="h-3.5 w-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
             </div>
         </div>
     </section>
+
 
     <!-- Interactive Card Image Switcher Script -->
     <script>

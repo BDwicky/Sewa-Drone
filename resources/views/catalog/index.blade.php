@@ -84,138 +84,119 @@
         </a>
     </section>
 
-    <!-- Product Showcase Grid (Pilih Drone dan Kelengkapan Device - Pure Physical Hardware Photos) -->
-    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 border-b border-white/10 pb-8 gap-4">
+        <!-- Product Showcase Grid (Refined Precision Grid Layout) -->
+    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <!-- Section Header (Clean Horizontal Baseline) -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/10 pb-6 gap-4">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 text-[11px] font-mono tracking-wider uppercase mb-3">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 text-[11px] font-mono tracking-wider uppercase mb-2">
                     <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
                     Armada Siap Terbang
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">PILIH DRONE &amp; KELENGKAPAN DEVICE</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">PILIH DRONE &amp; KELENGKAPAN DEVICE</h2>
             </div>
-            <p class="text-xs text-gray-400 max-w-md leading-relaxed">
-                Menampilkan wujud fisik asli unit pesawat drone DJI, propeller, gimbal, dan kelengkapan remote controller siap terbang.
+            <p class="text-xs text-gray-400 max-w-md font-light leading-relaxed">
+                Unit fisik pesawat, remote DJI RC, baterai cadangan, dan filter sinematik lengkap terawat.
             </p>
         </div>
 
-        <div class="grid gap-10 lg:grid-cols-2">
+        <!-- 4-Column Responsive Grid (or 2x2 Clean Balanced Cards) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             @forelse ($drones as $drone)
                 @php
                     $media = $allMedia[$drone->slug] ?? null;
                     $gallery = $media['gallery'] ?? [];
-                    // Ensure the initial image uses the actual local hardware photograph
                     $firstImg = isset($gallery[0]['url']) 
                         ? (str_starts_with($gallery[0]['url'], 'http') ? $gallery[0]['url'] : asset($gallery[0]['url']))
                         : (str_starts_with($drone->image_path, 'http') ? $drone->image_path : asset('storage/'.$drone->image_path));
                 @endphp
-                <div class="dji-card rounded-2xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between" id="card-{{ $drone->slug }}">
-                    <div class="flex flex-col gap-6">
-                        <!-- Top Header: Title, Category Badge & Price Box -->
-                        <div class="flex items-start justify-between gap-4">
+                <div class="dji-card rounded-xl overflow-hidden p-5 flex flex-col justify-between group" id="card-{{ $drone->slug }}">
+                    <div class="space-y-4">
+                        <!-- Top Metadata & Price Header -->
+                        <div class="flex items-start justify-between gap-2 border-b border-white/5 pb-3">
                             <div>
-                                <span class="text-[10px] tracking-widest text-sky-400 uppercase font-bold block">
+                                <span class="text-[9px] font-mono tracking-widest text-sky-400 uppercase font-bold block truncate max-w-[140px]">
                                     @if ($drone->slug === 'dji-mini-4-pro')
-                                        Ultra-Lightweight · Travel Ready
+                                        &lt;249g · Travel
                                     @elseif ($drone->slug === 'dji-air-3s')
-                                        Dual-Camera 1" CMOS · All-Round
+                                        Dual-Camera 1"
                                     @elseif ($drone->slug === 'dji-mavic-3-pro')
-                                        Triple Hasselblad · Cinema Master
+                                        Hasselblad Pro
                                     @elseif ($drone->slug === 'dji-avata-2')
-                                        Immersive FPV · High Agility
+                                        FPV Agility
                                     @else
-                                        Professional Aircraft
+                                        Aircraft
                                     @endif
                                 </span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1.5">{{ $drone->name }}</h3>
+                                <h3 class="text-lg font-bold text-white tracking-tight mt-0.5">{{ $drone->name }}</h3>
                             </div>
-                            <div class="text-right shrink-0 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5">
-                                <span class="text-lg sm:text-xl font-extrabold text-white tracking-tight">Rp{{ number_format((float) $drone->daily_rate, 0, ',', '.') }}</span>
-                                <span class="text-[10px] text-gray-400 block -mt-0.5 uppercase tracking-wider font-medium">/ hari</span>
+                            <div class="text-right shrink-0">
+                                <span class="text-base font-extrabold text-white block">Rp{{ number_format((float) $drone->daily_rate, 0, ',', '.') }}</span>
+                                <span class="text-[9px] text-gray-400 block -mt-1 font-mono uppercase">/ hari</span>
                             </div>
                         </div>
 
-                        <!-- Main Image Stage with Floating Hardware Device Showcase -->
-                        <div class="h-64 sm:h-72 rounded-xl bg-gradient-to-b from-white/[0.04] to-black/50 border border-white/10 flex items-center justify-center relative overflow-hidden group p-4 shadow-inner">
-                            <div class="absolute inset-0 bg-sky-500/[0.04] opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"></div>
-                            
+                        <!-- Image Stage -->
+                        <div class="h-44 rounded-lg bg-gradient-to-b from-white/[0.03] to-black/60 border border-white/5 flex items-center justify-center relative overflow-hidden p-3 shadow-inner">
                             <img id="card-img-{{ $drone->slug }}"
                                  src="{{ $firstImg }}"
                                  alt="{{ $drone->name }}"
-                                 class="h-full w-full object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] transition-all duration-300">
+                                 class="h-full w-full object-contain drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] transition-all duration-300 group-hover:scale-105">
 
                             <span id="card-label-{{ $drone->slug }}"
-                                  class="absolute bottom-3 left-3 text-[10px] font-mono text-gray-200 uppercase bg-black/75 backdrop-blur-md border border-white/20 px-3 py-1 rounded shadow-lg flex items-center gap-1.5">
-                                <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
-                                <span>{{ $gallery[0]['title'] ?? 'Wujud Fisik Depan' }}</span>
+                                  class="absolute bottom-2 left-2 text-[8.5px] font-mono text-gray-300 uppercase bg-black/80 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded truncate max-w-[160px]">
+                                {{ $gallery[0]['title'] ?? 'Tampak Depan' }}
                             </span>
                         </div>
 
-                        <!-- Multi-Angle Device Hardware Thumbnails Selector -->
+                        <!-- Multi-Angle Thumbnails (4 Buttons) -->
                         @if (count($gallery) > 0)
-                            <div>
-                                <span class="text-[10px] uppercase tracking-wider text-gray-400 block mb-2 font-mono font-semibold">Tinjau Wujud Fisik &amp; Sudut Drone:</span>
-                                <div class="grid grid-cols-4 gap-2.5">
-                                    @foreach ($gallery as $idx => $g)
-                                        @php
-                                            $gUrl = str_starts_with($g['url'], 'http') ? $g['url'] : asset($g['url']);
-                                        @endphp
-                                        <button type="button"
-                                                onclick="updateCardPreview('{{ $drone->slug }}', '{{ $gUrl }}', '{{ $g['title'] }}', this)"
-                                                class="thumb-btn-{{ $drone->slug }} h-16 rounded-lg border {{ $idx === 0 ? 'border-sky-400 ring-1 ring-sky-400/40 bg-sky-400/10' : 'border-white/10 opacity-70 bg-black/50' }} hover:opacity-100 hover:border-white/40 p-1.5 flex flex-col items-center justify-center transition overflow-hidden group">
-                                            <img src="{{ $gUrl }}" alt="{{ $g['title'] }}" class="h-9 w-auto object-contain group-hover:scale-105 transition duration-200">
-                                            <span class="text-[8px] text-gray-300 truncate w-full text-center mt-1 font-medium">{{ explode(' ', $g['title'])[0] }}</span>
-                                        </button>
-                                    @endforeach
-                                </div>
+                            <div class="grid grid-cols-4 gap-1.5 pt-1">
+                                @foreach ($gallery as $idx => $g)
+                                    @php
+                                        $gUrl = str_starts_with($g['url'], 'http') ? $g['url'] : asset($g['url']);
+                                    @endphp
+                                    <button type="button"
+                                            onclick="updateCardPreview('{{ $drone->slug }}', '{{ $gUrl }}', '{{ $g['title'] }}', this)"
+                                            class="thumb-btn-{{ $drone->slug }} h-10 rounded border {{ $idx === 0 ? 'border-sky-400 ring-1 ring-sky-400/40 bg-sky-400/10' : 'border-white/10 opacity-70 bg-black/50' }} hover:opacity-100 hover:border-white/40 p-1 flex items-center justify-center transition overflow-hidden">
+                                        <img src="{{ $gUrl }}" alt="{{ $g['title'] }}" class="h-6 w-auto object-contain">
+                                    </button>
+                                @endforeach
                             </div>
                         @endif
 
-                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light min-h-[3rem]">
+                        <!-- Description -->
+                        <p class="text-[11px] text-gray-400 leading-relaxed font-light line-clamp-2">
                             {{ $drone->description }}
                         </p>
 
-                        <!-- HUD Metrics Grid (DJI Spec Matrix) -->
-                        <div class="grid grid-cols-4 gap-2 border-t border-white/10 pt-4 text-center">
-                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
-                                <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->flight_time_min }}m</span>
-                                <span class="text-[9px] uppercase tracking-wider text-gray-400">Max Time</span>
+                        <!-- HUD Mini Spec Strip -->
+                        <div class="grid grid-cols-3 gap-1.5 border-t border-white/10 pt-3 text-center">
+                            <div class="bg-white/[0.02] rounded py-1.5 border border-white/5">
+                                <span class="block text-xs font-bold text-white">{{ $drone->flight_time_min }}m</span>
+                                <span class="text-[8px] uppercase tracking-wider text-gray-400">Terbang</span>
                             </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
-                                <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->range_km }}km</span>
-                                <span class="text-[9px] uppercase tracking-wider text-gray-400">Range O4</span>
+                            <div class="bg-white/[0.02] rounded py-1.5 border border-white/5">
+                                <span class="block text-xs font-bold text-white">{{ $drone->range_km }}km</span>
+                                <span class="text-[8px] uppercase tracking-wider text-gray-400">Jarak O4</span>
                             </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
-                                <span class="block text-sm sm:text-base font-bold text-white truncate px-1">{{ $drone->camera }}</span>
-                                <span class="text-[9px] uppercase tracking-wider text-gray-400">Sensor</span>
-                            </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
-                                <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->weight_g }}g</span>
-                                <span class="text-[9px] uppercase tracking-wider text-gray-400">Takeoff</span>
+                            <div class="bg-white/[0.02] rounded py-1.5 border border-white/5">
+                                <span class="block text-xs font-bold text-white">{{ $drone->weight_g }}g</span>
+                                <span class="text-[8px] uppercase tracking-wider text-gray-400">Bobot</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Card Actions with Refined Alignment -->
-                    <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between gap-4">
-                        <div>
-                            @if ($drone->weekly_rate)
-                                <span class="text-[10px] text-gray-400 block uppercase tracking-wider">Tarif 7 Hari:</span>
-                                <span class="text-xs sm:text-sm text-white font-semibold">Rp{{ number_format((float) $drone->weekly_rate, 0, ',', '.') }}</span>
-                            @else
-                                <span class="text-xs text-gray-500">Unit Siap Sewa</span>
-                            @endif
-                        </div>
-
-                        <a href="{{ route('drones.show', $drone) }}" class="inline-flex items-center gap-2 rounded-xl bg-white text-black hover:bg-sky-400 hover:text-black px-6 py-3 text-xs font-bold uppercase tracking-wider transition shadow-md shadow-white/5 hover:shadow-sky-400/20">
-                            <span>Detail &amp; Sewa</span>
-                            <svg class="h-3.5 w-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <!-- Bottom Action Button -->
+                    <div class="mt-5 pt-3 border-t border-white/5">
+                        <a href="{{ route('drones.show', $drone) }}" class="w-full flex items-center justify-center gap-1.5 rounded-lg bg-white/10 hover:bg-sky-400 hover:text-black text-white py-2.5 px-3 text-xs font-bold uppercase tracking-wider transition">
+                            <span>Pilih Unit</span>
+                            <svg class="h-3 w-3 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
                     </div>
                 </div>
             @empty
-                <div class="col-span-2 text-center py-20 text-gray-500">
+                <div class="col-span-4 text-center py-16 text-gray-500">
                     Belum ada armada drone terdaftar saat ini.
                 </div>
             @endforelse

@@ -11,7 +11,7 @@
     @endphp
 
     <!-- DJI Official Style Full-Screen Hero Banner Section (Persis seperti dji.com/id) -->
-    <section class="relative min-h-screen sm:min-h-[110vh] py-32 sm:py-48 w-full flex items-center justify-center overflow-hidden border-b border-white/10 bg-black">
+    <section class="relative min-h-[66vh] sm:min-h-[70vh] py-16 sm:py-20 w-full flex items-center justify-center overflow-hidden border-b border-white/10 bg-black">
         <!-- Background 4K Drone Footage (Autoplay, Loop, Muted, Seamless Dolly Shot) -->
         <div class="absolute inset-0 z-0">
             <video class="w-full h-full object-cover scale-105 filter brightness-[0.55] contrast-110 transition duration-1000" autoplay loop muted playsinline>

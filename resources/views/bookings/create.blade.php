@@ -4,103 +4,103 @@
 
 @section('content')
     <div class="mx-auto max-w-4xl px-4 sm:px-6 py-12">
-        <a href="{{ route('drones.show', $drone) }}" class="text-xs uppercase tracking-wider text-gray-400 hover:text-white transition flex items-center gap-1.5 mb-6">
+        <a href="{{ route('drones.show', $drone) }}" class="text-xs uppercase tracking-wider text-neutral-500 hover:text-black transition flex items-center gap-1.5 mb-6">
             <span>&larr;</span> Kembali ke {{ $drone->name }}
         </a>
 
-        <div class="border-b border-white/10 pb-6 mb-8">
-            <span class="text-xs uppercase tracking-[0.2em] text-sky-400 font-bold block mb-1">Prosedur Reservasi Online</span>
-            <h1 class="text-3xl font-extrabold text-white tracking-tight uppercase">FORMULIR SEWA ARMADA</h1>
-            <p class="text-xs text-gray-400 mt-2">
+        <div class="border-b border-neutral-200 pb-6 mb-8">
+            <span class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-mono font-bold block mb-1">Prosedur Reservasi Online</span>
+            <h1 class="text-3xl font-extrabold text-neutral-950 tracking-tight uppercase">FORMULIR SEWA ARMADA</h1>
+            <p class="text-xs text-neutral-600 mt-2">
                 Unit akan direservasi selama 2 jam setelah formulir dikirimkan untuk penyelesaian transaksi via Midtrans Snap.
             </p>
         </div>
 
         <div class="grid md:grid-cols-[1.3fr_1fr] gap-8 items-start">
             <!-- Form Input Pro-Gear -->
-            <div class="dji-card rounded-xl p-6 sm:p-8">
+            <div class="rounded-2xl bg-white border border-neutral-200 p-6 sm:p-8 shadow-sm">
                 <form action="{{ route('bookings.store', $drone) }}" method="POST" id="booking-form" class="space-y-5">
                     @csrf
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Nama Lengkap Sesuai KTP *</label>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Nama Lengkap Sesuai KTP *</label>
                         <input type="text" name="renter_name" required value="{{ old('renter_name') }}" placeholder="Contoh: Budi Santoso"
-                               class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3.5 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition">
+                               class="w-full rounded-lg bg-white border border-neutral-300 px-3.5 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Nomor WhatsApp Aktif *</label>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Nomor WhatsApp Aktif *</label>
                         <input type="tel" name="phone" required value="{{ old('phone') }}" placeholder="0812xxxxxxxx"
-                               class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3.5 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition">
+                               class="w-full rounded-lg bg-white border border-neutral-300 px-3.5 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Alamat Email (Pengiriman E-Invoice)</label>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Alamat Email (Pengiriman E-Invoice)</label>
                         <input type="email" name="email" value="{{ old('email') }}" placeholder="nama@domain.com"
-                               class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3.5 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none focus:ring-1 focus:ring-sky-400 transition">
+                               class="w-full rounded-lg bg-white border border-neutral-300 px-3.5 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                     </div>
 
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div>
-                            <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Mulai Sewa *</label>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Mulai Sewa *</label>
                             <input type="date" id="start_date" name="start_date" required
                                    value="{{ old('start_date', $start_date) }}" min="{{ now()->toDateString() }}"
-                                   class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none transition">
+                                   class="w-full rounded-lg bg-white border border-neutral-300 px-3 py-2.5 text-sm text-neutral-900 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                         </div>
                         <div>
-                            <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Selesai Sewa *</label>
+                            <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Selesai Sewa *</label>
                             <input type="date" id="end_date" name="end_date" required
                                    value="{{ old('end_date', $end_date) }}" min="{{ now()->toDateString() }}"
-                                   class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none transition">
+                                   class="w-full rounded-lg bg-white border border-neutral-300 px-3 py-2.5 text-sm text-neutral-900 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                         </div>
                     </div>
 
                     <!-- Add-ons Pro Section -->
-                    <div class="pt-3 border-t border-white/10 space-y-3">
+                    <div class="pt-3 border-t border-neutral-200 space-y-3">
                         @if ($drone->pilot_daily_rate)
-                            <label class="flex items-center gap-3 cursor-pointer p-3 rounded-lg bg-white/[0.02] border border-white/5 hover:border-white/20 transition">
-                                <input type="checkbox" name="with_pilot" value="1" @checked(old('with_pilot')) class="accent-sky-400 h-4 w-4 rounded">
+                            <label class="flex items-center gap-3 cursor-pointer p-3 rounded-lg bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition">
+                                <input type="checkbox" name="with_pilot" value="1" @checked(old('with_pilot')) class="accent-black h-4 w-4 rounded">
                                 <div class="text-xs">
-                                    <span class="text-white font-medium block">Tambahkan Pilot / Operator Resmi</span>
-                                    <span class="text-gray-400">+Rp{{ number_format((float)$drone->pilot_daily_rate, 0, ',', '.') }}/hari (Pilot berpengalaman & berlisensi)</span>
+                                    <span class="text-neutral-900 font-semibold block">Tambahkan Pilot / Operator Resmi</span>
+                                    <span class="text-neutral-500">+Rp{{ number_format((float)$drone->pilot_daily_rate, 0, ',', '.') }}/hari (Pilot berpengalaman & berlisensi)</span>
                                 </div>
                             </label>
                         @endif
 
                         @if ($drone->delivery_fee)
-                            <label class="flex items-center gap-3 cursor-pointer p-3 rounded-lg bg-white/[0.02] border border-white/5 hover:border-white/20 transition">
-                                <input type="checkbox" name="delivery" value="1" @checked(old('delivery')) class="accent-sky-400 h-4 w-4 rounded">
+                            <label class="flex items-center gap-3 cursor-pointer p-3 rounded-lg bg-neutral-50 border border-neutral-200 hover:border-neutral-400 transition">
+                                <input type="checkbox" name="delivery" value="1" @checked(old('delivery')) class="accent-black h-4 w-4 rounded">
                                 <div class="text-xs">
-                                    <span class="text-white font-medium block">Layanan Antar-Jemput Lokasi</span>
-                                    <span class="text-gray-400">+Rp{{ number_format((float)$drone->delivery_fee, 0, ',', '.') }} (Diantar langsung ke lokasi Anda)</span>
+                                    <span class="text-neutral-900 font-semibold block">Layanan Antar-Jemput Lokasi</span>
+                                    <span class="text-neutral-500">+Rp{{ number_format((float)$drone->delivery_fee, 0, ',', '.') }} (Diantar langsung ke lokasi Anda)</span>
                                 </div>
                             </label>
                         @endif
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Kode Voucher Promosi</label>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Kode Voucher Promosi</label>
                         <input type="text" name="voucher_code" value="{{ old('voucher_code') }}" placeholder="Ketik kode (opsional)"
-                               class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3.5 py-2.5 text-sm uppercase text-white tracking-widest focus:border-sky-400 focus:outline-none transition">
+                               class="w-full rounded-lg bg-white border border-neutral-300 px-3.5 py-2.5 text-sm uppercase text-neutral-900 placeholder:text-neutral-400 tracking-widest focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">
                     </div>
 
                     <div>
-                        <label class="block text-xs uppercase tracking-wider font-semibold text-gray-300 mb-1.5">Catatan Keperluan Khusus (Opsional)</label>
+                        <label class="block text-xs uppercase tracking-wider font-semibold text-neutral-700 mb-1.5">Catatan Keperluan Khusus (Opsional)</label>
                         <textarea name="notes" rows="2" placeholder="Tuliskan tujuan pemakaian (contoh: shooting wedding luar ruangan)"
-                                  class="w-full rounded-lg bg-[#06080D] border border-white/15 px-3.5 py-2.5 text-sm text-white focus:border-sky-400 focus:outline-none transition">{{ old('notes') }}</textarea>
+                                  class="w-full rounded-lg bg-white border border-neutral-300 px-3.5 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-black focus:outline-none focus:ring-1 focus:ring-black transition shadow-sm">{{ old('notes') }}</textarea>
                     </div>
 
                     @if (config('services.turnstile.site_key'))
                         <div class="cf-turnstile" data-sitekey="{{ config('services.turnstile.site_key') }}"></div>
                     @endif
 
-                    @error('start_date')<p class="text-xs text-red-400 font-medium">{{ $message }}</p>@enderror
-                    @error('end_date')<p class="text-xs text-red-400 font-medium">{{ $message }}</p>@enderror
-                    @error('renter_name')<p class="text-xs text-red-400 font-medium">{{ $message }}</p>@enderror
-                    @error('phone')<p class="text-xs text-red-400 font-medium">{{ $message }}</p>@enderror
-                    @error('cf-turnstile-response')<p class="text-xs text-red-400 font-medium">{{ $message }}</p>@enderror
+                    @error('start_date')<p class="text-xs text-red-600 font-medium">{{ $message }}</p>@enderror
+                    @error('end_date')<p class="text-xs text-red-600 font-medium">{{ $message }}</p>@enderror
+                    @error('renter_name')<p class="text-xs text-red-600 font-medium">{{ $message }}</p>@enderror
+                    @error('phone')<p class="text-xs text-red-600 font-medium">{{ $message }}</p>@enderror
+                    @error('cf-turnstile-response')<p class="text-xs text-red-600 font-medium">{{ $message }}</p>@enderror
 
-                    <div class="pt-4 border-t border-white/10">
-                        <button type="submit" class="w-full rounded-lg bg-sky-400 hover:bg-sky-300 text-black font-bold py-3.5 px-4 text-xs uppercase tracking-wider transition shadow-lg shadow-sky-500/20">
+                    <div class="pt-4 border-t border-neutral-200">
+                        <button type="submit" class="w-full rounded-lg bg-black hover:bg-neutral-800 text-white font-extrabold py-3.5 px-4 text-xs uppercase tracking-wider transition shadow-lg border border-black">
                             Konfirmasi & Bayar via Midtrans &rarr;
                         </button>
                     </div>
@@ -108,36 +108,36 @@
             </div>
 
             <!-- Order Summary Floating Panel -->
-            <div class="dji-card rounded-xl p-6 sticky top-20">
-                <span class="text-[10px] tracking-widest text-sky-400 uppercase font-bold block mb-1">Rincian Perhitungan</span>
-                <h3 class="text-lg font-bold text-white tracking-tight">{{ $drone->name }}</h3>
-                <p class="text-xs text-gray-400 mt-1 mb-6">{{ $drone->camera }} · {{ $drone->flight_time_min }} Menit Terbang</p>
+            <div class="rounded-2xl bg-white border border-neutral-200 p-6 shadow-sm sticky top-20">
+                <span class="text-[10px] tracking-widest text-neutral-500 font-mono uppercase font-bold block mb-1">Rincian Perhitungan</span>
+                <h3 class="text-lg font-bold text-neutral-900 tracking-tight">{{ $drone->name }}</h3>
+                <p class="text-xs text-neutral-500 mt-1 mb-6">{{ $drone->camera }} · {{ $drone->flight_time_min }} Menit Terbang</p>
 
-                <div class="space-y-3 text-xs border-y border-white/10 py-4">
+                <div class="space-y-3 text-xs border-y border-neutral-200 py-4">
                     <div class="flex justify-between">
-                        <span class="text-gray-400">Tarif Dasar Harian</span>
-                        <span class="text-white font-medium">Rp{{ number_format((float) $drone->daily_rate, 0, ',', '.') }}</span>
+                        <span class="text-neutral-500">Tarif Dasar Harian</span>
+                        <span class="text-neutral-900 font-medium">Rp{{ number_format((float) $drone->daily_rate, 0, ',', '.') }}</span>
                     </div>
                     @if ($drone->weekly_rate)
                         <div class="flex justify-between">
-                            <span class="text-gray-400">Tarif Paket 7 Hari</span>
-                            <span class="text-white font-medium">Rp{{ number_format((float) $drone->weekly_rate, 0, ',', '.') }}</span>
+                            <span class="text-neutral-500">Tarif Paket 7 Hari</span>
+                            <span class="text-neutral-900 font-medium">Rp{{ number_format((float) $drone->weekly_rate, 0, ',', '.') }}</span>
                         </div>
                     @endif
                     <div class="flex justify-between">
-                        <span class="text-gray-400">Durasi Terpilih</span>
-                        <span id="summary-days" class="text-white font-semibold">—</span>
+                        <span class="text-neutral-500">Durasi Terpilih</span>
+                        <span id="summary-days" class="text-neutral-900 font-semibold">—</span>
                     </div>
                 </div>
 
-                <div class="pt-4">
-                    <span class="text-[11px] uppercase tracking-wider text-gray-400 block">Total Perkiraan Biaya</span>
-                    <div id="estimate" class="text-2xl font-extrabold text-white tracking-tight mt-1">—</div>
+                <div class="mt-4 p-4 rounded-xl bg-black text-white shadow-md">
+                    <span class="text-[10px] uppercase tracking-wider text-neutral-400 block font-mono font-medium">Total Perkiraan Biaya</span>
+                    <div id="estimate" class="text-2xl font-extrabold text-white tracking-tight mt-0.5">—</div>
                 </div>
 
-                <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-gray-400 space-y-2">
-                    <p class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> Pembayaran aman dengan QRIS otomatis</p>
-                    <p class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span> E-Invoice resmi diterbitkan seketika</p>
+                <div class="mt-6 pt-4 border-t border-neutral-200 text-[11px] text-neutral-600 space-y-2">
+                    <p class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-black"></span> Pembayaran aman dengan QRIS otomatis</p>
+                    <p class="flex items-center gap-1.5"><span class="h-1.5 w-1.5 rounded-full bg-black"></span> E-Invoice resmi diterbitkan seketika</p>
                 </div>
             </div>
         </div>

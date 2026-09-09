@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if (str_contains(database_path(), '[') || str_contains(database_path(), ']')) {
+            $this->loadMigrationsFrom(strtr(database_path('migrations'), ['[' => '[[]', ']' => '[]]']));
+        }
     }
 }

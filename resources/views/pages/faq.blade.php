@@ -4,8 +4,14 @@
 @section('meta_description', 'Pertanyaan umum sewa drone: syarat, deposit, denda, zona terbang, DRONEID, pilot, pembayaran dan refund.')
 
 @section('content')
-    <div class="mx-auto max-w-3xl px-4 py-10">
-        <h1 class="text-2xl font-bold">Pertanyaan umum</h1>
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
+        <div class="border-b border-neutral-200 pb-6 mb-8">
+            <span class="text-xs uppercase tracking-[0.2em] text-neutral-500 font-bold block mb-1">Pusat Bantuan &amp; Panduan</span>
+            <h1 class="text-3xl font-extrabold text-neutral-950 tracking-tight uppercase">PERTANYAAN UMUM (FAQ)</h1>
+            <p class="text-xs text-neutral-600 mt-2">
+                Informasi seputar syarat sewa, regulasi zona terbang, integrasi pembayaran otomatis, dan SOP serah terima armada.
+            </p>
+        </div>
 
         <div class="mt-8 space-y-4">
             @php
@@ -23,12 +29,12 @@
                 ];
             @endphp
             @foreach ($faqs as $i => [$q, $a])
-                <details class="group border border-[#24334F] rounded-lg bg-[#111A2C]">
-                    <summary class="cursor-pointer list-none px-5 py-4 font-medium flex items-center justify-between">
-                        {{ $q }}
-                        <span class="text-[#38BDF8] group-open:rotate-45 transition text-lg leading-none">+</span>
+                <details class="group border border-neutral-200 rounded-xl bg-white hover:border-neutral-400 transition shadow-sm">
+                    <summary class="cursor-pointer list-none px-5 py-4 font-semibold text-neutral-900 flex items-center justify-between">
+                        <span>{{ $q }}</span>
+                        <span class="text-neutral-600 group-open:rotate-45 transition text-lg leading-none font-bold">+</span>
                     </summary>
-                    <p class="px-5 pb-4 text-sm text-[#94A3B8] leading-relaxed">{{ $a }}</p>
+                    <p class="px-5 pb-4 text-sm text-neutral-600 leading-relaxed font-light border-t border-neutral-100 pt-3">{{ $a }}</p>
                 </details>
             @endforeach
         </div>

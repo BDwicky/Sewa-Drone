@@ -8,6 +8,7 @@ use Illuminate\Console\Command;
 class ExpireUnpaidBookings extends Command
 {
     protected $signature = 'bookings:expire-unpaid';
+
     protected $description = 'Melepas (cancel) booking pending yang tidak dibayar lebih dari 2 jam';
 
     public function handle(): int

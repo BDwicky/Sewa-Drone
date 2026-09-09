@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingConfirmedMail;
 use App\Models\Booking;
+use App\Models\Invoice;
 use App\Models\Payment;
 use App\Services\Notify;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 
 class SnapController extends Controller
 {
@@ -42,7 +46,7 @@ class SnapController extends Controller
             ? 'https://app.midtrans.com/snap/v1/transactions'
             : 'https://app.sandbox.midtrans.com/snap/v1/transactions';
 
-        $resp = \Illuminate\Support\Facades\Http::withHeaders([
+        $resp = Http::withHeaders([
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
             'Authorization' => 'Basic '.base64_encode(config('midtrans.server_key').':'),
@@ -109,7 +113,7 @@ class SnapController extends Controller
             $booking->update(['status' => 'confirmed']);
 
             // E-invoice otomatis (idempotent)
-            \App\Models\Invoice::firstOrCreate(
+            Invoice::firstOrCreate(
                 ['number' => 'INV/'.$booking->created_at->format('Y-m').'/'.$booking->code],
                 [
                     'booking_id' => $booking->id,
@@ -132,8 +136,8 @@ class SnapController extends Controller
 
             if ($booking->email) {
                 try {
-                    \Illuminate\Support\Facades\Mail::to($booking->email)
-                        ->send(new \App\Mail\BookingConfirmedMail($booking));
+                    Mail::to($booking->email)
+                        ->send(new BookingConfirmedMail($booking));
                 } catch (\Throwable $e) {
                     report($e);
                 }

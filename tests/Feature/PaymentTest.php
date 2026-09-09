@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Mail\BookingConfirmedMail;
 use App\Models\Booking;
+use App\Models\Invoice;
 use App\Models\Payment;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Config;
@@ -46,7 +47,7 @@ class PaymentTest extends TestCase
         $this->assertEquals('settlement', $payment->fresh()->status);
         $this->assertEquals('confirmed', $booking->fresh()->status);
 
-        $invoice = \App\Models\Invoice::where('booking_id', $booking->id)->first();
+        $invoice = Invoice::where('booking_id', $booking->id)->first();
         $this->assertNotNull($invoice);
         $this->assertStringStartsWith('INV/', $invoice->number);
         $this->assertEquals(1050000.0, (float) $invoice->amount);
@@ -91,7 +92,7 @@ class PaymentTest extends TestCase
         $this->postJson(route('midtrans.webhook'), $payload)->assertNoContent();
         $this->postJson(route('midtrans.webhook'), $payload)->assertNoContent();
 
-        $this->assertEquals(1, \App\Models\Invoice::where('booking_id', $booking->id)->count());
+        $this->assertEquals(1, Invoice::where('booking_id', $booking->id)->count());
     }
 
     public function test_halaman_tracking_menampilkan_status(): void
@@ -109,7 +110,7 @@ class PaymentTest extends TestCase
     public function test_halaman_invoice_tampil_dengan_qr_dan_nomor(): void
     {
         $booking = Booking::factory()->create(['status' => 'confirmed', 'total_price' => 1050000]);
-        $invoice = \App\Models\Invoice::create([
+        $invoice = Invoice::create([
             'number' => 'INV/'.now()->format('Y-m').'/'.$booking->code,
             'booking_id' => $booking->id,
             'amount' => 1050000,

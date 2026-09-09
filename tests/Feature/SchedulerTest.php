@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use App\Console\Commands\CompleteFinishedBookings;
 use App\Console\Commands\ExpireUnpaidBookings;
 use App\Models\Booking;
-use App\Models\Drone;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

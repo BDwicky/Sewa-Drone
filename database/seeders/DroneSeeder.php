@@ -4,13 +4,42 @@ namespace Database\Seeders;
 
 use App\Models\Drone;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Str;
 
 class DroneSeeder extends Seeder
 {
     public function run(): void
     {
         $items = [
+            [
+                'name' => 'DJI Neo',
+                'slug' => 'dji-neo',
+                'description' => 'Drone ultra-ringan seukuran telapak tangan (135g) dengan fitur AI subject tracking dan lepas landas langsung dari telapak tangan (palm takeoff & landing). Sangat mudah diterbangkan tanpa remote kontrol tambahan, ideal untuk solo vlogger dan konten cepat.',
+                'camera' => '4K/30fps RockSteady',
+                'flight_time_min' => 18,
+                'range_km' => 7,
+                'weight_g' => 135,
+                'daily_rate' => 175000,
+                'weekly_rate' => 875000,
+                'pilot_daily_rate' => 350000,
+                'delivery_fee' => 35000,
+                'replacement_value' => 4500000,
+                'image_path' => 'drones/neo_front.jpg',
+            ],
+            [
+                'name' => 'DJI Mini 3 Pro',
+                'slug' => 'dji-mini-3-pro',
+                'description' => 'Pilihan rental paling populer dan ekonomis untuk content creator dan traveling. Bobot di bawah 249g bebas izin terbang komersial dasar, sensor 1/1.3-inch CMOS f/1.7 tajam dengan mode True Vertical Shooting (rotasi fisik 90 derajat).',
+                'camera' => '4K/60fps HDR 48MP',
+                'flight_time_min' => 34,
+                'range_km' => 12,
+                'weight_g' => 249,
+                'daily_rate' => 275000,
+                'weekly_rate' => 1375000,
+                'pilot_daily_rate' => 450000,
+                'delivery_fee' => 40000,
+                'replacement_value' => 9500000,
+                'image_path' => 'drones/mini3_front.jpg',
+            ],
             [
                 'name' => 'DJI Mini 4 Pro',
                 'slug' => 'dji-mini-4-pro',
@@ -24,6 +53,7 @@ class DroneSeeder extends Seeder
                 'pilot_daily_rate' => 500000,
                 'delivery_fee' => 50000,
                 'replacement_value' => 12000000,
+                'image_path' => 'drones/mini4_front.jpg',
             ],
             [
                 'name' => 'DJI Air 3S',
@@ -38,20 +68,22 @@ class DroneSeeder extends Seeder
                 'pilot_daily_rate' => 600000,
                 'delivery_fee' => 50000,
                 'replacement_value' => 17000000,
+                'image_path' => 'drones/air3s_front.jpg',
             ],
             [
-                'name' => 'DJI Mavic 3 Pro',
-                'slug' => 'dji-mavic-3-pro',
-                'description' => 'Flagship dengan kamera Hasselblad 5.1K, tiga lensa. Untuk pekerjaan serius: film, properti premium, survei. Wajib sertifikat pilot untuk komersial.',
-                'camera' => '5.1K Hasselblad',
-                'flight_time_min' => 43,
+                'name' => 'DJI Mavic 3 Classic',
+                'slug' => 'dji-mavic-3-classic',
+                'description' => 'Flagship sinematik murni dengan kamera tunggal 4/3 CMOS Hasselblad L2D-20c legendaris. Menghasilkan rekaman 5.1K/50fps dan 4K/120fps dengan profil warna Hasselblad Natural Colour Solution (HNCS) dan transmisi O3+ 15KM.',
+                'camera' => '5.1K Hasselblad 4/3 CMOS',
+                'flight_time_min' => 46,
                 'range_km' => 15,
-                'weight_g' => 958,
-                'daily_rate' => 1000000,
-                'weekly_rate' => 5000000,
-                'pilot_daily_rate' => 750000,
-                'delivery_fee' => 75000,
-                'replacement_value' => 38000000,
+                'weight_g' => 895,
+                'daily_rate' => 850000,
+                'weekly_rate' => 4250000,
+                'pilot_daily_rate' => 700000,
+                'delivery_fee' => 70000,
+                'replacement_value' => 27000000,
+                'image_path' => 'drones/m3classic_front.jpg',
             ],
             [
                 'name' => 'DJI Avata 2',
@@ -66,6 +98,37 @@ class DroneSeeder extends Seeder
                 'pilot_daily_rate' => 750000,
                 'delivery_fee' => 75000,
                 'replacement_value' => 11000000,
+                'image_path' => 'drones/avata2_front.jpg',
+            ],
+            [
+                'name' => 'DJI Mavic 3 Pro',
+                'slug' => 'dji-mavic-3-pro',
+                'description' => 'Flagship dengan kamera Hasselblad 5.1K, tiga lensa. Untuk pekerjaan serius: film, properti premium, survei. Wajib sertifikat pilot untuk komersial.',
+                'camera' => '5.1K Hasselblad',
+                'flight_time_min' => 43,
+                'range_km' => 15,
+                'weight_g' => 958,
+                'daily_rate' => 1000000,
+                'weekly_rate' => 5000000,
+                'pilot_daily_rate' => 750000,
+                'delivery_fee' => 75000,
+                'replacement_value' => 38000000,
+                'image_path' => 'drones/mavic3_front.jpg',
+            ],
+            [
+                'name' => 'DJI Inspire 3',
+                'slug' => 'dji-inspire-3',
+                'description' => 'Standar emas perfilman Hollywood dan produksi komersial kelas atas. Kamera full-frame Zenmuse X9-8K Air dengan format CinemaDNG dan Apple ProRes RAW 8K/75fps, transmisi O3 Pro kontrol dual-pilot, dan akurasi posisi RTK sentimeter.',
+                'camera' => '8K/75fps Full-Frame Zenmuse X9',
+                'flight_time_min' => 28,
+                'range_km' => 15,
+                'weight_g' => 3995,
+                'daily_rate' => 3500000,
+                'weekly_rate' => 17500000,
+                'pilot_daily_rate' => 1200000,
+                'delivery_fee' => 150000,
+                'replacement_value' => 175000000,
+                'image_path' => 'drones/inspire3_front.jpg',
             ],
         ];
 

@@ -7,6 +7,9 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=3">
+        <link rel="apple-touch-icon" href="{{ asset('favicon.svg') }}?v=3">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -16,9 +19,10 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+            <div class="flex flex-col items-center">
+                <a href="/" class="flex flex-col items-center gap-2 group">
+                    <x-application-logo class="w-16 h-16 rounded-2xl shadow-xl transition-transform duration-300 group-hover:scale-105" />
+                    <span class="font-black tracking-wider text-xl text-neutral-900 mt-1">SEWA<span class="text-neutral-500">DRONE</span></span>
                 </a>
             </div>
 

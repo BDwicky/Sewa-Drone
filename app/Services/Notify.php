@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Booking;
+use Illuminate\Support\Facades\Http;
 
 /**
  * Notifikasi ringkas: WA admin via Fonnte + helper lain.
@@ -18,7 +19,7 @@ class Notify
         }
 
         try {
-            \Illuminate\Support\Facades\Http::withHeaders(['Authorization' => $token])
+            Http::withHeaders(['Authorization' => $token])
                 ->post('https://api.fonnte.com/send', [
                     'target' => config('services.wa.admin_number'),
                     'message' => $text,

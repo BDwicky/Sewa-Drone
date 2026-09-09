@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice {{ $invoice->number }}</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}?v=3">
+    <link rel="apple-touch-icon" href="{{ asset('favicon.svg') }}?v=3">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: -apple-system, system-ui, 'Segoe UI', Roboto, sans-serif; color: #111; background: #f1f5f9; }
@@ -27,16 +29,19 @@
         .parties { display: flex; gap: 40px; margin-top: 32px; font-size: 12px; line-height: 1.7; }
         .parties h4 { font-size: 11px; text-transform: uppercase; color: #64748b; margin-bottom: 4px; }
         .note { margin-top: 28px; font-size: 10.5px; color: #64748b; line-height: 1.7; border-top: 1px solid #e2e8f0; padding-top: 12px; }
-        .btn-print { margin: 0 auto 16px; display: block; padding: 10px 22px; background: #0ea5e9; color: #fff; border: 0; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px; }
+        .btn-print { margin: 0 auto 16px; display: block; padding: 10px 22px; background: #000000; color: #fff; border: 0; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px; }
     </style>
 </head>
 <body>
     <button class="btn-print no-print" onclick="window.print()">Cetak / Simpan PDF</button>
     <div class="page">
         <div class="head">
-            <div class="brand">
-                {{ config('app.name') }}
-                <small>Rental drone — {{ config('app.url') }}<br>WA: {{ config('services.wa.admin_number') }}</small>
+            <div class="brand" style="display: flex; align-items: center; gap: 14px;">
+                <img src="{{ asset('images/logo-icon.svg') }}?v=3" alt="Sewa Drone" style="width: 44px; height: 44px; border-radius: 10px; flex-shrink: 0;">
+                <div>
+                    {{ config('app.name') }}
+                    <small>Rental drone — {{ config('app.url') }}<br>WA: {{ config('services.wa.admin_number') }}</small>
+                </div>
             </div>
             <div>
                 <div class="inv-label">INVOICE</div>

@@ -1,90 +1,644 @@
 {
-  "dji-mini-4-pro": {
-    "primary_image": "drones/mini4_front.jpg",
+  "dji-neo": {
+    "primary_image": "/storage/drones/neo_front.jpg",
     "gallery": [
       {
-        "title": "Wujud Fisik Depan & Kamera",
-        "url": "/storage/drones/mini4_front.jpg"
+        "title": "Wujud Fisik Depan (0°)",
+        "url": "/storage/drones/neo_front.jpg"
       },
       {
-        "title": "Bodi Atas & Propeller",
-        "url": "/storage/drones/mini4_side.jpg"
+        "title": "Palm Takeoff & Landing",
+        "url": "/storage/drones/neo_palm.jpg"
       },
       {
-        "title": "Detail Gimbal & Sensor",
-        "url": "/storage/drones/mini4_gimbal.jpg"
-      },
-      {
-        "title": "Kondisi Terlipat Ringkas",
-        "url": "/storage/drones/mini4_folded.jpg"
-      }
-    ],
-    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
-  },
-  "dji-air-3s": {
-    "primary_image": "drones/air3s_front.jpg",
-    "gallery": [
-      {
-        "title": "Wujud Fisik Depan",
-        "url": "/storage/drones/air3s_front.jpg"
-      },
-      {
-        "title": "Dual-Camera Sensor",
-        "url": "/storage/drones/air3s_dual.jpg"
-      },
-      {
-        "title": "Bodi & Lengan Motor",
-        "url": "/storage/drones/air3s_angle.jpg"
-      },
-      {
-        "title": "Profil Samping",
-        "url": "/storage/drones/air3s_side.jpg"
-      }
-    ],
-    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
-  },
-  "dji-mavic-3-pro": {
-    "primary_image": "drones/mavic3_front.jpg",
-    "gallery": [
-      {
-        "title": "Wujud Fisik Depan",
-        "url": "/storage/drones/mavic3_front.jpg"
-      },
-      {
-        "title": "Triple Lensa Hasselblad",
-        "url": "/storage/drones/mavic3_lens.jpg"
-      },
-      {
-        "title": "Bodi Kokoh Pro-Class",
-        "url": "/storage/drones/mavic3_body.jpg"
-      },
-      {
-        "title": "Kamera & Pendaratan",
-        "url": "/storage/drones/mavic3_stand.jpg"
-      }
-    ],
-    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
-  },
-  "dji-avata-2": {
-    "primary_image": "drones/avata2_front.jpg",
-    "gallery": [
-      {
-        "title": "Wujud Fisik FPV Drone",
-        "url": "/storage/drones/avata2_front.jpg"
+        "title": "AI Subject Tracking",
+        "url": "/storage/drones/neo_track.jpg"
       },
       {
         "title": "Integrated Propeller Guard",
-        "url": "/storage/drones/avata2_guard.jpg"
-      },
-      {
-        "title": "Kamera Ultra-Wide 155\u00b0",
-        "url": "https://www-cdn.djiits.com/dps/1e7506e1b6a86a0a8c35ad5ca56bc4ad.jpg"
-      },
-      {
-        "title": "Motion Controller & Body",
-        "url": "https://www-cdn.djiits.com/dps/fdd52d8a68c7c1fe7782ecaf4479b550.jpg"
+        "url": "/storage/drones/neo_guard.jpg"
       }
     ],
-    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
+    "video": "/storage/drones/videos/neo_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/c9bed7bb-3cf1-4255-99ba-0f645555d45d.mp4",
+    "video_badge": "4K/30fps • AI Smart Tracking",
+    "video_title": "DJI Neo — Palm Takeoff & AI Subject Tracking Flight Reel",
+    "video_description": "Uji terbang drone vlog ultra-ringan 135g DJI Neo dengan lepas landas langsung dari telapak tangan, kendali bebas remote, dan pelacakan subjek cerdas berbasis AI.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "1/2-inch CMOS Sensor, 12 MP Efektif",
+        "photo_res": "12 MP Single Shot (4000×3000)",
+        "video_res": "4K Ultra HD (3840×2160) @ 30fps, 1080p FHD @ 60/50/30fps",
+        "color_profile": "Standard Color Profile (Otomatis & Optimal untuk Media Sosial)",
+        "lens_aperture": "Format 13mm Equivalent, Bukaan f/2.8, FOV Super Lebar 117.5°",
+        "stabilization": "Single-Axis Mechanical Gimbal (Tilt) + RockSteady & HorizonBalancing EIS",
+        "iso_range": "100 - 6400 (Otomatis & Manual)"
+      },
+      "flight": {
+        "max_time": "18 Menit (Baterai 1435 mAh)",
+        "max_range": "7 KM (DJI O4 dengan Remote) / 50 Meter (Wi-Fi Smartphone Control)",
+        "wind_resistance": "Level 4 (8.0 m/s / 28.8 km/jam)",
+        "max_speed": "16 m/s (57.6 km/jam di Mode Manual FPV) / 8 m/s (Normal Mode)",
+        "max_altitude": "2.000 m di atas permukaan laut (dpl)",
+        "weight": "135 gram (Ultra-Ringan seukuran telapak tangan)"
+      },
+      "safety": {
+        "obstacle_sensing": "Sensor Vision Posisi Bawah (Monocular Vision + Infrared ToF)",
+        "tracking": "AI Subject Tracking Cerdas (Pelacakan tubuh, wajah, & sepeda otomatis)",
+        "satellite": "GPS + Galileo + BeiDou Positioning",
+        "rth": "Smart Return to Palm / RTH Otomatis saat Baterai Lemah atau Hilang Sinyal"
+      },
+      "hardware": {
+        "storage": "22GB Internal Storage (Cukup merekam ~40 menit video 4K/30fps)",
+        "battery": "Li-ion 1435 mAh (10.5 Wh) 7.3V",
+        "controller": "Palm Control (Tanpa Remote), DJI Fly App Wi-Fi, DJI RC-N3, atau DJI Goggles 3",
+        "regulation": "Bebas Izin Regulasi (Sub-250g), Sangat Aman dengan Pelindung Baling-Baling Penuh"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Neo (135g)",
+        "1x Integrated Propeller Guard (Pelindung baling-baling menyeluruh)",
+        "2x Intelligent Flight Battery",
+        "1x Two-Way Charging Hub",
+        "1x Pasang Baling-Baling Cadangan + Obeng",
+        "1x Kabel USB-C ke USB-C PD Fast Charging",
+        "1x Tas Kompak Pelindung Unit"
+      ]
+    }
+  },
+  "dji-mini-3-pro": {
+    "primary_image": "/storage/drones/mini4_turntable_03.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Depan (0°)",
+        "url": "/storage/drones/mini4_turntable_03.jpg"
+      },
+      {
+        "title": "Serong Perspektif (45°)",
+        "url": "/storage/drones/mini4_turntable_01.jpg"
+      },
+      {
+        "title": "Bodi Samping (90°)",
+        "url": "/storage/drones/mini4_turntable_06.jpg"
+      },
+      {
+        "title": "Tampak Belakang & Atas (180°)",
+        "url": "/storage/drones/mini4_turntable_02.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/mini3_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/95733371-2a52-40c8-9b84-dead7dd50023.mp4",
+    "video_badge": "4K/60fps HDR • True Vertical",
+    "video_title": "DJI Mini 3 Pro — True Vertical Cinematic Travel Reel",
+    "video_description": "Tangkapan kamera sensor 1/1.3-inch CMOS f/1.7 DJI Mini 3 Pro dengan mode True Vertical Shooting 4K/60fps HDR dan ActiveTrack saat traveling santai.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "1/1.3-inch CMOS Sensor, Dual Native ISO, Piksel 2.4μm 4-in-1",
+        "photo_res": "48 MP RAW (8064×6048) & 12 MP SmartPhoto",
+        "video_res": "4K HDR @ 60/50/30/24fps, 2.7K @ 60fps, 1080p @ 120fps Slow-Motion",
+        "color_profile": "10-bit D-Cinelike & 8-bit Normal (Gradasi warna sinematik fleksibel)",
+        "lens_aperture": "Format 24mm Equivalent, Bukaan Lebar f/1.7, FOV 82.1°",
+        "stabilization": "Gimbal Mekanikal 3-Axis dengan Rotasi Fisik 90° True Vertical Shooting",
+        "iso_range": "100 - 6400 (Foto & Video)"
+      },
+      "flight": {
+        "max_time": "34 Menit (Baterai Standar) / 47 Menit (Flight Battery Plus)",
+        "max_range": "12 KM (DJI O3 / OcuSync 3.0 HD Video Transmission)",
+        "wind_resistance": "Level 5 (10.7 m/s / 38.5 km/jam)",
+        "max_speed": "16 m/s (57.6 km/jam di S-Mode) / 10 m/s (N-Mode)",
+        "max_altitude": "4.000 m di atas permukaan laut (dpl)",
+        "weight": "249 gram (Regulasi bebas izin rekreasi)"
+      },
+      "safety": {
+        "obstacle_sensing": "Tri-Directional Obstacle Sensing (Depan, Belakang, Bawah) + APAS 4.0",
+        "tracking": "FocusTrack Suite (ActiveTrack 4.0, Spotlight 2.0, Point of Interest 3.0)",
+        "satellite": "GPS + Galileo + BeiDou Triple GNSS",
+        "rth": "Smart RTH, Low Battery RTH, Failsafe RTH"
+      },
+      "hardware": {
+        "storage": "Slot MicroSD UHS-I Speed Class 3 (Mendukung hingga 512GB)",
+        "battery": "Li-ion 2453 mAh (18.1 Wh) 7.38V",
+        "controller": "DJI RC (Layar FHD 5.5\" 700 nits) atau DJI RC-N1",
+        "regulation": "Sub-249g Ramah Regulasi Global & Bebas Sertifikasi Komersial Dasar"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Mini 3 Pro",
+        "1x DJI RC Remote Controller dengan Layar Sentuh Built-in",
+        "2x Intelligent Flight Battery",
+        "1x Two-Way Charging Hub",
+        "1x Set ND Filter Profesional (ND16/64/256)",
+        "2x Pasang Baling-Baling Cadangan",
+        "1x Gimbal Protector",
+        "1x Shoulder Bag Travel"
+      ]
+    }
+  },
+  "dji-mini-4-pro": {
+    "primary_image": "/storage/drones/mini4_turntable_03.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Depan (0°)",
+        "url": "/storage/drones/mini4_turntable_03.jpg"
+      },
+      {
+        "title": "Serong Perspektif (45°)",
+        "url": "/storage/drones/mini4_turntable_01.jpg"
+      },
+      {
+        "title": "Profil Samping Terlipat (90°)",
+        "url": "/storage/drones/mini4_turntable_06.jpg"
+      },
+      {
+        "title": "Tampak Belakang & Atas (180°)",
+        "url": "/storage/drones/mini4_turntable_02.jpg"
+      },
+      {
+        "title": "Detail Kamera & Gimbal E24",
+        "url": "/storage/drones/mini4_turntable_04.jpg"
+      },
+      {
+        "title": "Uji Terbang Mengudara",
+        "url": "/storage/drones/mini4_turntable_18.jpg"
+      }
+    ],
+    "turntable_360": [
+      {
+        "deg": 0,
+        "title": "Depan (0°)",
+        "url": "/storage/drones/mini4_turntable_03.jpg"
+      },
+      {
+        "deg": 45,
+        "title": "Serong Depan-Kanan (45°)",
+        "url": "/storage/drones/mini4_turntable_01.jpg"
+      },
+      {
+        "deg": 90,
+        "title": "Samping Terlipat (90°)",
+        "url": "/storage/drones/mini4_turntable_06.jpg"
+      },
+      {
+        "deg": 180,
+        "title": "Belakang & Atas (180°)",
+        "url": "/storage/drones/mini4_turntable_02.jpg"
+      },
+      {
+        "deg": 225,
+        "title": "Manuver Udara Serong (225°)",
+        "url": "/storage/drones/mini4_turntable_18.jpg"
+      },
+      {
+        "deg": 270,
+        "title": "Melayang Di Udara (270°)",
+        "url": "/storage/drones/mini4_turntable_13.jpg"
+      },
+      {
+        "deg": 315,
+        "title": "Close-Up Gimbal & Lensa (315°)",
+        "url": "/storage/drones/mini4_turntable_04.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/mini4_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/c4f66ba4-f803-4296-aed8-0a3e88e15da7.mp4",
+    "video_badge": "4K/60fps HDR • D-Log M",
+    "video_title": "DJI Mini 4 Pro — True Vertical & Omnidirectional ActiveTrack Reel",
+    "video_description": "Contoh video tangkapan kamera asli sensor 1/1.3-inch CMOS DJI Mini 4 Pro dengan mode True Vertical Shooting 4K/60fps HDR, stabilisasi gimbal 3-axis, dan penghindaran rintangan 360°.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "1/1.3-inch CMOS Sensor, Dual Native ISO Fusion, Piksel 2.4μm 4-in-1",
+        "photo_res": "48 MP RAW / JPEG (8064×6048) & 12 MP SmartPhoto",
+        "video_res": "4K HDR @ 60fps, 4K @ 100fps Slow-Motion, FHD @ 200fps",
+        "color_profile": "10-bit D-Log M, 10-bit HLG, 8-bit Normal (1.07 Miliar Warna)",
+        "lens_aperture": "Format 24mm Equivalent, Bukaan Lebar f/1.7, FOV 82.1°",
+        "stabilization": "Gimbal Mekanikal 3-Axis + True Vertical 90° + Tilt Kemiringan 60° ke atas",
+        "iso_range": "100 - 6400 (Normal), 100 - 12800 (Night Mode Video)"
+      },
+      "flight": {
+        "max_time": "34 Menit (Baterai Standar) / 45 Menit (Flight Battery Plus)",
+        "max_range": "20 KM (DJI O4 HD Video Transmission 1080p/60fps)",
+        "wind_resistance": "Level 5 (10.7 m/s / 38.5 km/jam)",
+        "max_speed": "16 m/s (57.6 km/jam di S-Mode)",
+        "max_altitude": "4.000 m di atas permukaan laut (dpl)",
+        "weight": "249 gram (Ultra-ringan bebas sertifikasi)"
+      },
+      "safety": {
+        "obstacle_sensing": "Omnidirectional 360° Vision Sensing (4 sensor fish-eye + 3D ToF bawah) + APAS 5.0",
+        "tracking": "ActiveTrack 360° dengan Touch Trace Wheel Interaktif & POI 3.0",
+        "satellite": "GPS + Galileo + BeiDou Triple GNSS",
+        "rth": "Advanced Smart RTH Siang/Malam dengan AR Home Point & Flight Path Display"
+      },
+      "hardware": {
+        "storage": "2GB Internal Storage + Slot MicroSD UHS-I V30 (hingga 512GB)",
+        "battery": "Li-ion 2590 mAh (18.96 Wh) Intelligent Flight Battery",
+        "controller": "DJI RC 2 (Layar Built-in 5.5\" FHD 700 nits, Antena 2T4R)",
+        "regulation": "Kategori Terbuka Rekreasi (Sub-249g) Bebas Izin Khusus, Cukup DRONEID"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Mini 4 Pro",
+        "1x DJI RC 2 Remote Controller (Screen 700 nits)",
+        "3x Intelligent Flight Battery (Fly More Combo)",
+        "1x Two-Way Charging Hub",
+        "1x Set ND Filter Resmi (ND16/64/256)",
+        "3x Pasang Baling-Baling Cadangan + Obeng",
+        "1x Gimbal Protector Transparan",
+        "1x DJI Shoulder Bag & Waterproof Hardcase"
+      ]
+    }
+  },
+  "dji-air-3s": {
+    "primary_image": "/storage/drones/air3s_angle_2.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Depan (0°)",
+        "url": "/storage/drones/air3s_angle_2.jpg"
+      },
+      {
+        "title": "Serong Mengudara (45°)",
+        "url": "/storage/drones/air3_angle_01.jpg"
+      },
+      {
+        "title": "Profil Samping Bodi (90°)",
+        "url": "/storage/drones/air3s_angle_1.jpg"
+      },
+      {
+        "title": "Dual Camera Gimbal E70/E24",
+        "url": "/storage/drones/air3s_angle_4.jpg"
+      },
+      {
+        "title": "Manuver Melayang Di Atas Rumput",
+        "url": "/storage/drones/air3_angle_03.jpg"
+      }
+    ],
+    "turntable_360": [
+      {
+        "deg": 0,
+        "title": "Depan (0°)",
+        "url": "/storage/drones/air3s_angle_2.jpg"
+      },
+      {
+        "deg": 45,
+        "title": "Serong Mengudara (45°)",
+        "url": "/storage/drones/air3_angle_01.jpg"
+      },
+      {
+        "deg": 90,
+        "title": "Profil Samping (90°)",
+        "url": "/storage/drones/air3s_angle_1.jpg"
+      },
+      {
+        "deg": 180,
+        "title": "Dual-Camera Tele E70 (180°)",
+        "url": "/storage/drones/air3s_angle_4.jpg"
+      },
+      {
+        "deg": 270,
+        "title": "Melayang Stabil (270°)",
+        "url": "/storage/drones/air3_angle_04.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/air3s_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/f9d82514-97d3-4f69-a2c2-28698f40d6ed.mp4",
+    "video_badge": "4K/60fps Dual Cam • 10-bit D-Log M",
+    "video_title": "DJI Air 3S — Dual-Camera 1\" CMOS & Nightscape LiDAR Reel",
+    "video_description": "Hasil uji terbang sinematik kamera ganda DJI Air 3S (lensa wide 24mm 1\" CMOS + telephoto 70mm) dengan transmisi video O4 20km dan visual low-light malam hari jernih.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "Dual-Camera System: Kamera Utama 1-inch CMOS 50 MP + Medium Telephoto 1/1.3-inch CMOS 48 MP",
+        "photo_res": "Kamera Utama 50 MP (8192×6144) | Telephoto 48 MP (8064×6048)",
+        "video_res": "4K HDR @ 60fps (Kedua Kamera), 4K @ 120fps Slow-Mo, FHD @ 240fps",
+        "color_profile": "10-bit D-Log M, 10-bit HLG, 8-bit Normal, Dynamic Range hingga 14 Stop",
+        "lens_aperture": "Utama 24mm f/1.8 (FOV 84°) | Telephoto 70mm f/2.8 (3x Optical Zoom, FOV 35°)",
+        "stabilization": "Gimbal Mekanikal 3-Axis Presisi Tinggi (Pitch, Roll, Yaw)",
+        "iso_range": "100 - 12800 (D-Log M / HLG), 100 - 3200 (Night Mode)"
+      },
+      "flight": {
+        "max_time": "45 Menit (Waktu jelajah sinematik terpanjang di kelasnya)",
+        "max_range": "20 KM (DJI O4 HD Video Transmission 10-bit 1080p/60fps)",
+        "wind_resistance": "Level 6 (12.0 m/s / 43.2 km/jam)",
+        "max_speed": "21 m/s (75.6 km/jam di Sport Mode)",
+        "max_altitude": "6.000 m di atas permukaan laut (dpl)",
+        "weight": "724 gram (Stabilitas angin superior)"
+      },
+      "safety": {
+        "obstacle_sensing": "Omnidirectional Sensing dengan LiDAR Forward-Facing Pertama (Nightscape Obstacle Sensing)",
+        "tracking": "ActiveTrack 360° Tingkat Lanjut dengan Subject Focusing & Free Panorama",
+        "satellite": "GPS + Galileo + BeiDou Triple GNSS",
+        "rth": "Next-Gen Smart RTH Tanpa GPS Berkat Visual Positioning & LiDAR"
+      },
+      "hardware": {
+        "storage": "42GB Internal Storage + Slot MicroSD (Off-State QuickTransfer tanpa nyalakan drone)",
+        "battery": "Li-ion 4276 mAh (62.6 Wh) 4S Intelligent Flight Battery",
+        "controller": "DJI RC 2 (Layar FHD 5.5\" 700 nits) atau DJI RC-N3",
+        "regulation": "Kelas Menengah Profesional (Wajib patuh Permenhub PM 37/2020 untuk komersial)"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Air 3S",
+        "1x DJI RC 2 Remote Controller (Screen 700 nits)",
+        "3x Intelligent Flight Battery (45 menit/baterai)",
+        "1x Battery Charging Hub dengan Power Accumulation",
+        "1x Set ND Filter Resmi (ND8/32/128)",
+        "3x Pasang Low-Noise Propellers",
+        "1x Gimbal Protector",
+        "1x DJI Shoulder Bag & Safety Hardcase"
+      ]
+    }
+  },
+  "dji-mavic-3-classic": {
+    "primary_image": "/storage/drones/mavic3_angle_1.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Depan (0°)",
+        "url": "/storage/drones/mavic3_angle_1.jpg"
+      },
+      {
+        "title": "Perspektif Serong 45°",
+        "url": "/storage/drones/mavic3_angle_2.jpg"
+      },
+      {
+        "title": "Profil Bodi Samping (90°)",
+        "url": "/storage/drones/mavic3_angle_3.jpg"
+      },
+      {
+        "title": "Hasselblad 4/3 CMOS Lens",
+        "url": "/storage/drones/mavic3_angle_4.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/m3classic_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/294e7e25-f644-4c97-8709-8c7a0b9470d3.mp4",
+    "video_badge": "5.1K Hasselblad • 10-bit D-Log",
+    "video_title": "DJI Mavic 3 Classic — 4/3 CMOS Hasselblad Flight Reel",
+    "video_description": "Footage sinematik murni dari sensor legendaris 4/3 CMOS Hasselblad L2D-20c dengan profil warna natural HNCS, 5.1K/50fps, dan dynamic range 12.8 stop.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "4/3 CMOS Hasselblad L2D-20c Sensor, Ukuran Piksel 3.3μm, Dynamic Range 12.8 Stops",
+        "photo_res": "20 MP RAW 12-bit (5280×3956)",
+        "video_res": "5.1K @ 50/30/24fps, 4K DCI @ 120fps, 4K @ 60fps, FHD @ 200fps",
+        "color_profile": "10-bit D-Log, 10-bit HLG, Hasselblad Natural Colour Solution (HNCS)",
+        "lens_aperture": "Format 24mm Equivalent, Aperture Variabel f/2.8 - f/11, FOV 84°",
+        "stabilization": "Gimbal Mekanikal 3-Axis Sinematik Ultra-Halus",
+        "iso_range": "100 - 6400 (Manual & D-Log)"
+      },
+      "flight": {
+        "max_time": "46 Menit (Baterai Kapasitas Tinggi 5000 mAh)",
+        "max_range": "15 KM (DJI O3+ Transmission, Live-Feed 1080p/60fps)",
+        "wind_resistance": "Level 6 (12.0 m/s / 43.2 km/jam)",
+        "max_speed": "21 m/s (75.6 km/jam di S-Mode)",
+        "max_altitude": "6.000 m di atas permukaan laut (dpl)",
+        "weight": "895 gram (Rigid aerospace frame)"
+      },
+      "safety": {
+        "obstacle_sensing": "Omnidirectional Obstacle Sensing 360° (8 sensor vision sudut lebar) + APAS 5.0",
+        "tracking": "ActiveTrack 5.0, Spotlight 2.0, Point of Interest 3.0",
+        "satellite": "GPS + Galileo + BeiDou Triple GNSS",
+        "rth": "Advanced RTH Otomatis Menghitung Rute Terpendek & Menghindari Halangan"
+      },
+      "hardware": {
+        "storage": "8GB Internal Storage + Slot MicroSDXC UHS-I V30 / V60",
+        "battery": "LiPo 4S 5000 mAh (77 Wh) 15.4V",
+        "controller": "DJI RC-N1 atau DJI RC Pro / DJI RC",
+        "regulation": "Standar Komersial Sinematik (Sertifikasi APDI direkomendasikan)"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Mavic 3 Classic (Hasselblad 4/3 CMOS)",
+        "1x DJI RC Remote Controller (Layar Built-in)",
+        "2x Intelligent Flight Battery (5000 mAh)",
+        "1x 65W Portable Charger & Car Adapter",
+        "1x Set Hasselblad ND Filter Profesional (ND8/16/32/64)",
+        "3x Pasang Low-Noise Propellers",
+        "1x Storage Cover Pelindung Gimbal & Bodi",
+        "1x Hardcase Pelindung Kedap Air"
+      ]
+    }
+  },
+  "dji-avata-2": {
+    "primary_image": "/storage/drones/avata2_angle_1.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik FPV Drone (0°)",
+        "url": "/storage/drones/avata2_angle_1.jpg"
+      },
+      {
+        "title": "Integrated Propeller Guard (45°)",
+        "url": "/storage/drones/avata2_angle_2.jpg"
+      },
+      {
+        "title": "FPV Melayang Di Udara",
+        "url": "/storage/drones/avata2_angle_3.jpg"
+      },
+      {
+        "title": "Detail Aerodinamis FPV Bodi",
+        "url": "/storage/drones/avata2_angle_4.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/avata2_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/13bc678f-a46b-4da3-bc19-01aae98382e2.mp4",
+    "video_badge": "4K/60fps 155° FPV • RockSteady 3.0+",
+    "video_title": "DJI Avata 2 — High-Speed Acrobatic FPV & Low-Altitude Flight",
+    "video_description": "Uji terbang ekstrem first-person view (FPV) kecepatan tinggi melewati celah sempit dengan stabilisasi RockSteady 3.0+, HorizonSteady, dan sensor 1/1.3-inch ultra-wide 155°.",
+    "model_3d": "/storage/drones/models/drone_fpv.glb",
+    "specs": {
+      "camera": {
+        "sensor": "1/1.3-inch CMOS Sensor, Piksel Besar untuk Low-Light, 12 MP Efektif",
+        "photo_res": "12 MP (4000×3000)",
+        "video_res": "4K Ultra HD @ 60/50/30fps HDR, 4K @ 100/120fps High-Speed FPV, 2.7K @ 120fps",
+        "color_profile": "10-bit D-Log M & Standard Profile",
+        "lens_aperture": "Format 12mm Equivalent, Bukaan f/2.8, Ultra-Wide Angle FOV 155°",
+        "stabilization": "Single-Axis Gimbal (Tilt) + RockSteady 3.0+ & HorizonSteady 360° EIS",
+        "iso_range": "100 - 25600 (Sangat responsif di kondisi minim cahaya)"
+      },
+      "flight": {
+        "max_time": "23 Menit (Peningkatan signifikan dibanding generasi pertama)",
+        "max_range": "13 KM (DJI O4 FPV Transmission dengan latency ultra-rendah 24ms)",
+        "wind_resistance": "Level 5 (10.7 m/s / 38.5 km/jam)",
+        "max_speed": "27 m/s (97.2 km/jam di Manual FPV Mode) / 16 m/s (Sport) / 8 m/s (Normal)",
+        "max_altitude": "5.000 m di atas permukaan laut (dpl)",
+        "weight": "377 gram (CineWhoop FPV dengan pelindung terpadu)"
+      },
+      "safety": {
+        "obstacle_sensing": "Downward & Backward Visual Positioning Sensors (Optical Flow & ToF)",
+        "tracking": "Easy ACRO (Acrobatic Flight dengan 1 klik: Flip, Roll, 180° Drift)",
+        "satellite": "GPS + Galileo + BeiDou Positioning",
+        "rth": "Smart RTH & Turtle Mode (Bisa membalikkan diri sendiri saat terjatuh telentang)"
+      },
+      "hardware": {
+        "storage": "46GB Internal Storage (Cukup ~90 menit video 4K/60fps) + Slot MicroSD",
+        "battery": "Li-ion 2150 mAh (31.7 Wh) 14.76V",
+        "controller": "DJI Goggles 3 (Layar Micro-OLED 100Hz) + DJI RC Motion 3 / FPV Remote Controller 3",
+        "regulation": "Wajib terbang dengan Visual Observer (VO) atau Pilot Pendamping Berlisensi FPV"
+      },
+      "in_the_box": [
+        "1x Unit Drone FPV DJI Avata 2",
+        "1x DJI Goggles 3 (Dual Micro-OLED 100Hz dengan Real View PiP)",
+        "1x DJI RC Motion 3 Controller",
+        "3x Intelligent Flight Battery",
+        "1x Two-Way Charging Hub",
+        "2x Pasang Propeller Baling-Baling Tiga Bilah",
+        "1x Gimbal Protector",
+        "1x Sling Bag & Foam Travel Hardcase"
+      ]
+    }
+  },
+  "dji-mavic-3-pro": {
+    "primary_image": "/storage/drones/mavic3_angle_1.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Depan Flagship (0°)",
+        "url": "/storage/drones/mavic3_angle_1.jpg"
+      },
+      {
+        "title": "Perspektif Serong (45°)",
+        "url": "/storage/drones/mavic3_angle_2.jpg"
+      },
+      {
+        "title": "Bodi Samping & Lengan (90°)",
+        "url": "/storage/drones/mavic3_angle_3.jpg"
+      },
+      {
+        "title": "Triple Lensa Hasselblad (180°)",
+        "url": "/storage/drones/mavic3_angle_4.jpg"
+      }
+    ],
+    "turntable_360": [
+      {
+        "deg": 0,
+        "title": "Depan (0°)",
+        "url": "/storage/drones/mavic3_angle_1.jpg"
+      },
+      {
+        "deg": 45,
+        "title": "Perspektif Serong (45°)",
+        "url": "/storage/drones/mavic3_angle_2.jpg"
+      },
+      {
+        "deg": 90,
+        "title": "Bodi Samping (90°)",
+        "url": "/storage/drones/mavic3_angle_3.jpg"
+      },
+      {
+        "deg": 180,
+        "title": "Triple Hasselblad (180°)",
+        "url": "/storage/drones/mavic3_angle_4.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/mavic3_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/fdaa1941-2093-48eb-836a-913613397978.mp4",
+    "video_badge": "5.1K Hasselblad • Apple ProRes & D-Log",
+    "video_title": "DJI Mavic 3 Pro — Triple Hasselblad Cinema Flagship Reel",
+    "video_description": "Footage produksi perfilman dari sensor 4/3 CMOS Hasselblad 5.1K, lensa tele 70mm, dan super tele 166mm dengan kedalaman warna 10-bit D-Log dan rentang dinamis 12.8 stop.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "Triple Optical Camera: Hasselblad 4/3 CMOS 20 MP + Medium Tele 1/1.3\" CMOS 48 MP + Tele 1/2\" CMOS 12 MP",
+        "photo_res": "Hasselblad 20 MP | Medium Tele 48 MP | Telephoto 12 MP",
+        "video_res": "5.1K @ 50fps (Hasselblad), 4K @ 120fps (Hasselblad & Med Tele), 4K @ 60fps (Telephoto)",
+        "color_profile": "10-bit D-Log, 10-bit D-Log M, HLG, Hasselblad Natural Colour Solution (HNCS)",
+        "lens_aperture": "24mm f/2.8-f/11 (Hasselblad) | 70mm f/2.8 (3x Zoom) | 166mm f/3.4 (7x Optical & 28x Hybrid Zoom)",
+        "stabilization": "Gimbal Mekanikal 3-Axis Triple-Lens Calibration",
+        "iso_range": "100 - 6400 (Foto & Video), 100 - 1600 (D-Log)"
+      },
+      "flight": {
+        "max_time": "43 Menit",
+        "max_range": "15 KM (DJI O3+ Transmission, 1080p/60fps High Frame Rate)",
+        "wind_resistance": "Level 6 (12.0 m/s / 43.2 km/jam)",
+        "max_speed": "21 m/s (75.6 km/jam)",
+        "max_altitude": "6.000 m di atas permukaan laut (dpl)",
+        "weight": "958 gram (Flagship triple camera system)"
+      },
+      "safety": {
+        "obstacle_sensing": "Omnidirectional Obstacle Sensing 360° (8 sensor vision resolusi tinggi) + APAS 5.0",
+        "tracking": "FocusTrack Suite (ActiveTrack 5.0, Spotlight, POI) di semua lensa 24mm & 70mm",
+        "satellite": "GPS + Galileo + BeiDou Triple GNSS",
+        "rth": "Advanced Smart RTH dengan Deteksi Rintangan Real-Time"
+      },
+      "hardware": {
+        "storage": "8GB Internal Storage + Slot MicroSDXC UHS-I/II (Mendukung hingga 1TB)",
+        "battery": "LiPo 4S 5000 mAh (77 Wh)",
+        "controller": "DJI RC atau DJI RC Pro Flagship",
+        "regulation": "Standar Komersial Perfilman & Liputan Skala Besar"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Mavic 3 Pro (Triple Camera System)",
+        "1x DJI RC Remote Controller (Layar Built-in 700 nits)",
+        "3x Intelligent Flight Battery",
+        "1x 100W Battery Charging Hub",
+        "1x Set ND Filter Triple Camera (ND8/16/32/64)",
+        "3x Pasang Low-Noise Propellers",
+        "1x Mavic 3 Pro Storage Cover",
+        "1x Premium Waterproof Hardcase"
+      ]
+    }
+  },
+  "dji-inspire-3": {
+    "primary_image": "/storage/drones/inspire3_front.jpg",
+    "gallery": [
+      {
+        "title": "Wujud Fisik Full-Frame Cinema",
+        "url": "/storage/drones/inspire3_front.jpg"
+      },
+      {
+        "title": "Zenmuse X9-8K Air Gimbal",
+        "url": "/storage/drones/inspire3_x9.jpg"
+      },
+      {
+        "title": "Transformable Carbon Frame",
+        "url": "/storage/drones/inspire3_arms.jpg"
+      },
+      {
+        "title": "Dual-Operator Flight System",
+        "url": "/storage/drones/inspire3_rc.jpg"
+      }
+    ],
+    "video": "/storage/drones/videos/inspire3_reel.mp4",
+    "video_cdn": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/a6ac452d-9fbe-49fc-95ea-e2bffdc80a0b.mp4",
+    "video_badge": "8K/75fps CinemaDNG • ProRes RAW",
+    "video_title": "DJI Inspire 3 — Full-Frame 8K Hollywood Cinema Flight Reel",
+    "video_description": "Hasil rekaman kamera full-frame Zenmuse X9-8K Air dengan format CinemaDNG 8K/75fps, Apple ProRes RAW, akurasi RTK sentimeter, dan transmisi O3 Pro kontrol ganda pilot & DOP.",
+    "model_3d": "/storage/drones/models/drone_model.glb",
+    "specs": {
+      "camera": {
+        "sensor": "Full-Frame 35mm Zenmuse X9-8K Air Gimbal Camera, Dual Native ISO 800 / 4000, 14+ Stops Dynamic Range",
+        "photo_res": "44.7 MP Full-Frame RAW (8192×5456)",
+        "video_res": "8K Full-Frame @ 75fps CinemaDNG, 8K @ 75fps Apple ProRes RAW, 4K @ 120fps ProRes RAW tanpa crop",
+        "color_profile": "DJI Cinema Color System (DCCS), EI Mode, 3D LUT Support",
+        "lens_aperture": "DJI DL Mount Lenses (Pilihan Lensa: 18mm, 24mm, 35mm, 50mm f/2.8 Full-Frame)",
+        "stabilization": "Gimbal Mekanikal 3-Axis 360° Pan & Tilt Boost 80° Rotasi Tanpa Hambatan",
+        "iso_range": "EI 200 - 6400 (Dual Native ISO 800 / 4000)"
+      },
+      "flight": {
+        "max_time": "28 Menit (Sistem Baterai Ganda TB51 Hot-Swappable)",
+        "max_range": "15 KM (DJI O3 Pro Transmission, Independen Kontrol Pilot & DOP)",
+        "wind_resistance": "Level 7 (14.0 m/s / 50.4 km/jam)",
+        "max_speed": "26 m/s (94 km/jam) / Kecepatan Menyelam (Dive) 10 m/s",
+        "max_altitude": "7.000 m di atas permukaan laut (dpl)",
+        "weight": "3.995 gram (Full Carbon Fiber Aerodynamic Body)"
+      },
+      "safety": {
+        "obstacle_sensing": "Omnidirectional Sensing Sistem 9 Kamera Fisheye + LiDAR ToF Bawah + Sensor Night-Vision FPV 1/1.8\"",
+        "tracking": "Spotlight Pro dengan Deep-Learning Pengenalan Subjek, Waypoint Pro (3D Dolly & Repeatable Routes)",
+        "satellite": "GPS + Galileo + BeiDou + Integrasi Antena RTK Sentimeter Presisi Tinggi",
+        "rth": "Aviation-Grade Smart RTH dengan Akurasi Posisi Sentimeter"
+      },
+      "hardware": {
+        "storage": "DJI PROSSD 1TB (Kecepatan Tulis 900MB/s untuk 8K RAW)",
+        "battery": "Dual Battery TB51 Intelligent Flight Battery 4280 mAh 23.1V dengan Pemanas Otomatis",
+        "controller": "Dual DJI RC Plus (Layar 7\" 1200 nits Tahan Air IP54) untuk Pilot dan Camera Operator",
+        "regulation": "Wajib Pilot Berlisensi APDI / FASI Khusus Kelas Berat Komersial (Termasuk Operator Pilot Kami)"
+      },
+      "in_the_box": [
+        "1x Unit Drone DJI Inspire 3 Carbon Fiber",
+        "1x Zenmuse X9-8K Air Gimbal Camera",
+        "1x Lensa Full-Frame DJI DL 24mm f/2.8 LS ASPH",
+        "1x Lensa Full-Frame DJI DL 50mm f/2.8 LS ASPH",
+        "2x DJI RC Plus Controller (Dual Operator Pilot & DOP)",
+        "6x TB51 Intelligent Flight Battery (3 pasang)",
+        "1x TB51 Intelligent Battery Charging Hub",
+        "1x DJI PROSSD 1TB + High-Speed Reader",
+        "1x Heavy-Duty Rolling Trolley Case"
+      ]
+    }
   }
 }

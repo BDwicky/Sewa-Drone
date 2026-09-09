@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Minimalist Black & White Favicon Tile -->
+  <rect width="120" height="120" rx="30" fill="#000000" stroke="#FFFFFF" stroke-width="2.5" stroke-opacity="0.3" />
+
+  <!-- Precision S -->
+  <path d="M 52 36 H 32 L 24 44 V 56 L 32 64 H 46 L 54 72 V 80 L 46 88 H 26" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Precision D -->
+  <path d="M 64 36 V 88 M 64 36 H 76 C 88 36 96 46 96 62 C 96 78 88 88 76 88 H 64" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Lens Core Focal Dot -->
+  <circle cx="78" cy="62" r="3.5" fill="#FFFFFF" />
+</svg>

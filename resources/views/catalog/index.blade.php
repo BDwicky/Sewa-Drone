@@ -10,93 +10,97 @@
         $heroVideo = "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4";
     @endphp
 
-    <!-- DJI Hero Cinematic Section with Seamless Drone Dolly Video Background -->
-    <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-white/10 bg-[#06080D]">
+    <!-- DJI Hero Cinematic Section (Enhanced Height & Generous Vertical Breathing Room) -->
+    <section class="relative min-h-[96vh] flex items-center justify-center overflow-hidden border-b border-white/10 bg-[#06080D]">
         <!-- Fullscreen Autoplay Video Background (Dolly / Aerial Tracking Shot) -->
         <div class="absolute inset-0 z-0 overflow-hidden">
-            <video class="w-full h-full object-cover scale-105 filter brightness-[0.45] contrast-125 transition duration-1000" autoplay loop muted playsinline>
+            <video class="w-full h-full object-cover scale-105 filter brightness-[0.42] contrast-125 transition duration-1000" autoplay loop muted playsinline>
                 <source src="{{ $heroVideo }}" type="video/mp4">
             </video>
-            <!-- Vignette & Dark Overlay Gradients -->
-            <div class="absolute inset-0 bg-gradient-to-t from-[#06080D] via-[#06080D]/40 to-[#06080D]/80"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.14)_0%,rgba(6,8,13,0.75)_85%)]"></div>
+            <!-- Vignette & Dark Atmospheric Gradients -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#06080D] via-[#06080D]/50 to-[#06080D]/85"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.16)_0%,rgba(6,8,13,0.8)_85%)]"></div>
         </div>
 
-        <div class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center flex flex-col items-center">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-sky-400/40 bg-black/60 backdrop-blur-md text-sky-400 text-xs tracking-wider uppercase mb-8 font-medium shadow-xl shadow-sky-500/10">
+        <!-- Hero Content with Ample Spacing -->
+        <div class="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-32 sm:py-44 text-center flex flex-col items-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-400/40 bg-black/60 backdrop-blur-md text-sky-400 text-xs tracking-wider uppercase mb-10 font-medium shadow-xl shadow-sky-500/10">
                 <span class="h-2 w-2 rounded-full bg-sky-400 animate-ping"></span>
                 <span>DJI Flagship Fleet Rental</span>
                 <span class="text-gray-500 font-mono">/</span>
                 <span class="text-gray-300">Live 4K Cinema Ready</span>
             </div>
 
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white uppercase leading-[1.08] drop-shadow-2xl max-w-4xl">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white uppercase leading-[1.1] drop-shadow-2xl max-w-4xl">
                 TANGKAP SETIAP SUDUT<br>
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-white to-sky-200">SINEMATIK UDARA</span>
             </h1>
 
-            <p class="mt-6 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed drop-shadow px-4">
+            <p class="mt-8 text-sm sm:text-base md:text-lg text-gray-300 max-w-2xl mx-auto font-light leading-relaxed drop-shadow px-4">
                 Penyewaan armada drone DJI resmi terlengkap di Indonesia. Dilengkapi kontroler DJI RC, multi-baterai, filter sinematik, serta sistem pemesanan full-otomatis dengan Midtrans &amp; e-invoice instan.
             </p>
 
-            <!-- Quick Specs HUD Bar (Clean padding & balanced layout) -->
-            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full max-w-3xl text-left border border-white/15 bg-black/60 backdrop-blur-md rounded-2xl p-5 sm:p-6 shadow-2xl">
+            <!-- Quick Specs HUD Bar with Relaxed Padding -->
+            <div class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 w-full max-w-3xl text-left border border-white/15 bg-black/65 backdrop-blur-md rounded-2xl p-6 sm:p-7 shadow-2xl">
                 <div class="hud-spec border-sky-400">
                     <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">4K / 5.1K</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-0.5 block">Hasselblad &amp; HDR</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Hasselblad &amp; HDR</span>
                 </div>
                 <div class="hud-spec border-sky-400">
                     <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">45 Menit</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-0.5 block">Max Durasi Terbang</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Max Durasi Baterai</span>
                 </div>
                 <div class="hud-spec border-sky-400">
                     <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">20 KM</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-0.5 block">Transmisi O4 FHD</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Transmisi O4 FHD</span>
                 </div>
                 <div class="hud-spec border-sky-400">
                     <span class="block text-2xl sm:text-3xl font-extrabold text-white tracking-tight">&lt; 249g</span>
-                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-0.5 block">Tersedia Bebas Izin</span>
+                    <span class="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1 block">Tersedia Bebas Izin</span>
                 </div>
             </div>
 
-            <!-- Hero Action Buttons with Perfect Symmetric Padding -->
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <a href="#fleet" class="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 hover:bg-sky-300 text-black font-extrabold text-xs uppercase tracking-wider px-6 py-3.5 transition shadow-lg shadow-sky-400/25 hover:shadow-sky-400/40 transform hover:-translate-y-0.5 min-w-[170px]">
+            <!-- Hero Action Buttons with Balanced Margin & Padding -->
+            <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
+                <a href="#fleet" class="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-400 hover:bg-sky-300 text-black font-extrabold text-xs uppercase tracking-wider px-7 py-4 transition shadow-lg shadow-sky-400/25 hover:shadow-sky-400/40 transform hover:-translate-y-0.5 min-w-[180px]">
                     <span>Jelajahi Armada</span>
                     <svg class="h-4 w-4 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="{{ route('pages.kebijakan') }}" class="inline-flex items-center justify-center rounded-xl border border-white/20 hover:border-white text-white text-xs uppercase tracking-wider px-6 py-3.5 transition backdrop-blur-md bg-black/40 hover:bg-white/10 min-w-[170px]">
+                <a href="{{ route('pages.kebijakan') }}" class="inline-flex items-center justify-center rounded-xl border border-white/20 hover:border-white text-white text-xs uppercase tracking-wider px-7 py-4 transition backdrop-blur-md bg-black/40 hover:bg-white/10 min-w-[180px]">
                     Syarat &amp; Tata Cara
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Product Showcase Grid (Armada Siap Terbang with Clean Architectural Alignment) -->
-    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+    <!-- Product Showcase Grid (Pilih Drone dan Kelengkapan Device - Pure Physical Hardware Photos) -->
+    <section id="fleet" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-white/10 pb-6 gap-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 border-b border-white/10 pb-8 gap-4">
             <div>
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 text-[11px] font-mono tracking-wider uppercase mb-2">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-400/30 bg-sky-500/10 text-sky-400 text-[11px] font-mono tracking-wider uppercase mb-3">
                     <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
                     Armada Siap Terbang
                 </div>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">PILIH DRONE &amp; KELENGKAPAN DEVICE</h2>
             </div>
             <p class="text-xs text-gray-400 max-w-md leading-relaxed">
-                Setiap armada telah dikalibrasi 100%, lengkap dengan remote controller, cadangan intelligent flight battery, charger hub, dan tas pembawa waterproof.
+                Menampilkan wujud fisik asli unit pesawat drone DJI, propeller, gimbal, dan kelengkapan remote controller siap terbang.
             </p>
         </div>
 
-        <div class="grid gap-8 lg:grid-cols-2">
+        <div class="grid gap-10 lg:grid-cols-2">
             @forelse ($drones as $drone)
                 @php
                     $media = $allMedia[$drone->slug] ?? null;
                     $gallery = $media['gallery'] ?? [];
-                    $firstImg = $gallery[0]['url'] ?? (str_starts_with($drone->image_path, 'http') ? $drone->image_path : asset('storage/'.$drone->image_path));
+                    // Ensure the initial image uses the actual local hardware photograph
+                    $firstImg = isset($gallery[0]['url']) 
+                        ? (str_starts_with($gallery[0]['url'], 'http') ? $gallery[0]['url'] : asset($gallery[0]['url']))
+                        : (str_starts_with($drone->image_path, 'http') ? $drone->image_path : asset('storage/'.$drone->image_path));
                 @endphp
-                <div class="dji-card rounded-2xl overflow-hidden p-6 sm:p-7 flex flex-col justify-between" id="card-{{ $drone->slug }}">
-                    <div class="flex flex-col gap-5">
+                <div class="dji-card rounded-2xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between" id="card-{{ $drone->slug }}">
+                    <div class="flex flex-col gap-6">
                         <!-- Top Header: Title, Category Badge & Price Box -->
                         <div class="flex items-start justify-between gap-4">
                             <div>
@@ -113,40 +117,44 @@
                                         Professional Aircraft
                                     @endif
                                 </span>
-                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">{{ $drone->name }}</h3>
+                                <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1.5">{{ $drone->name }}</h3>
                             </div>
-                            <div class="text-right shrink-0 bg-white/[0.03] border border-white/10 rounded-xl px-3.5 py-2">
+                            <div class="text-right shrink-0 bg-white/[0.03] border border-white/10 rounded-xl px-4 py-2.5">
                                 <span class="text-lg sm:text-xl font-extrabold text-white tracking-tight">Rp{{ number_format((float) $drone->daily_rate, 0, ',', '.') }}</span>
                                 <span class="text-[10px] text-gray-400 block -mt-0.5 uppercase tracking-wider font-medium">/ hari</span>
                             </div>
                         </div>
 
-                        <!-- Main Image Stage with Floating Showcase View -->
-                        <div class="h-60 sm:h-64 rounded-xl bg-gradient-to-b from-white/[0.04] to-black/40 border border-white/10 flex items-center justify-center relative overflow-hidden group p-4 shadow-inner">
+                        <!-- Main Image Stage with Floating Hardware Device Showcase -->
+                        <div class="h-64 sm:h-72 rounded-xl bg-gradient-to-b from-white/[0.04] to-black/50 border border-white/10 flex items-center justify-center relative overflow-hidden group p-4 shadow-inner">
                             <div class="absolute inset-0 bg-sky-500/[0.04] opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none"></div>
                             
                             <img id="card-img-{{ $drone->slug }}"
                                  src="{{ $firstImg }}"
                                  alt="{{ $drone->name }}"
-                                 class="h-full w-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] transition-all duration-300">
+                                 class="h-full w-full object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.85)] transition-all duration-300">
 
                             <span id="card-label-{{ $drone->slug }}"
-                                  class="absolute bottom-3 left-3 text-[10px] font-mono text-gray-300 uppercase bg-black/70 backdrop-blur-md border border-white/15 px-2.5 py-0.5 rounded shadow">
-                                {{ $gallery[0]['title'] ?? 'Tampak Depan' }}
+                                  class="absolute bottom-3 left-3 text-[10px] font-mono text-gray-200 uppercase bg-black/75 backdrop-blur-md border border-white/20 px-3 py-1 rounded shadow-lg flex items-center gap-1.5">
+                                <span class="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
+                                <span>{{ $gallery[0]['title'] ?? 'Wujud Fisik Depan' }}</span>
                             </span>
                         </div>
 
-                        <!-- Multi-Angle & Device Thumbnails Selector -->
+                        <!-- Multi-Angle Device Hardware Thumbnails Selector -->
                         @if (count($gallery) > 0)
                             <div>
-                                <span class="text-[10px] uppercase tracking-wider text-gray-400 block mb-1.5 font-mono font-semibold">Tinjau Sudut Pandang Perangkat:</span>
-                                <div class="grid grid-cols-4 gap-2">
+                                <span class="text-[10px] uppercase tracking-wider text-gray-400 block mb-2 font-mono font-semibold">Tinjau Wujud Fisik &amp; Sudut Drone:</span>
+                                <div class="grid grid-cols-4 gap-2.5">
                                     @foreach ($gallery as $idx => $g)
+                                        @php
+                                            $gUrl = str_starts_with($g['url'], 'http') ? $g['url'] : asset($g['url']);
+                                        @endphp
                                         <button type="button"
-                                                onclick="updateCardPreview('{{ $drone->slug }}', '{{ $g['url'] }}', '{{ $g['title'] }}', this)"
-                                                class="thumb-btn-{{ $drone->slug }} h-14 rounded-lg border {{ $idx === 0 ? 'border-sky-400 ring-1 ring-sky-400/40 bg-sky-400/10' : 'border-white/10 opacity-70 bg-black/50' }} hover:opacity-100 hover:border-white/40 p-1.5 flex flex-col items-center justify-center transition overflow-hidden">
-                                            <img src="{{ $g['url'] }}" alt="{{ $g['title'] }}" class="h-7 w-auto object-contain">
-                                            <span class="text-[8px] text-gray-300 truncate w-full text-center mt-0.5 font-medium">{{ explode(' ', $g['title'])[0] }}</span>
+                                                onclick="updateCardPreview('{{ $drone->slug }}', '{{ $gUrl }}', '{{ $g['title'] }}', this)"
+                                                class="thumb-btn-{{ $drone->slug }} h-16 rounded-lg border {{ $idx === 0 ? 'border-sky-400 ring-1 ring-sky-400/40 bg-sky-400/10' : 'border-white/10 opacity-70 bg-black/50' }} hover:opacity-100 hover:border-white/40 p-1.5 flex flex-col items-center justify-center transition overflow-hidden group">
+                                            <img src="{{ $gUrl }}" alt="{{ $g['title'] }}" class="h-9 w-auto object-contain group-hover:scale-105 transition duration-200">
+                                            <span class="text-[8px] text-gray-300 truncate w-full text-center mt-1 font-medium">{{ explode(' ', $g['title'])[0] }}</span>
                                         </button>
                                     @endforeach
                                 </div>
@@ -159,19 +167,19 @@
 
                         <!-- HUD Metrics Grid (DJI Spec Matrix) -->
                         <div class="grid grid-cols-4 gap-2 border-t border-white/10 pt-4 text-center">
-                            <div class="bg-white/[0.02] rounded-lg py-2 px-1 border border-white/5">
+                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
                                 <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->flight_time_min }}m</span>
                                 <span class="text-[9px] uppercase tracking-wider text-gray-400">Max Time</span>
                             </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2 px-1 border border-white/5">
+                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
                                 <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->range_km }}km</span>
                                 <span class="text-[9px] uppercase tracking-wider text-gray-400">Range O4</span>
                             </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2 px-1 border border-white/5">
+                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
                                 <span class="block text-sm sm:text-base font-bold text-white truncate px-1">{{ $drone->camera }}</span>
                                 <span class="text-[9px] uppercase tracking-wider text-gray-400">Sensor</span>
                             </div>
-                            <div class="bg-white/[0.02] rounded-lg py-2 px-1 border border-white/5">
+                            <div class="bg-white/[0.02] rounded-lg py-2.5 px-1 border border-white/5">
                                 <span class="block text-sm sm:text-base font-bold text-white">{{ $drone->weight_g }}g</span>
                                 <span class="text-[9px] uppercase tracking-wider text-gray-400">Takeoff</span>
                             </div>
@@ -179,7 +187,7 @@
                     </div>
 
                     <!-- Card Actions with Refined Alignment -->
-                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between gap-4">
+                    <div class="mt-8 pt-5 border-t border-white/10 flex items-center justify-between gap-4">
                         <div>
                             @if ($drone->weekly_rate)
                                 <span class="text-[10px] text-gray-400 block uppercase tracking-wider">Tarif 7 Hari:</span>
@@ -189,7 +197,7 @@
                             @endif
                         </div>
 
-                        <a href="{{ route('drones.show', $drone) }}" class="inline-flex items-center gap-1.5 rounded-lg bg-white text-black hover:bg-sky-400 hover:text-black px-5 py-2.5 text-xs font-bold uppercase tracking-wider transition shadow-md shadow-white/5 hover:shadow-sky-400/20">
+                        <a href="{{ route('drones.show', $drone) }}" class="inline-flex items-center gap-2 rounded-xl bg-white text-black hover:bg-sky-400 hover:text-black px-6 py-3 text-xs font-bold uppercase tracking-wider transition shadow-md shadow-white/5 hover:shadow-sky-400/20">
                             <span>Detail &amp; Sewa</span>
                             <svg class="h-3.5 w-3.5 stroke-[2.5]" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         </a>
@@ -203,7 +211,7 @@
         </div>
     </section>
 
-    <!-- DJI Professional Standards Showcase (Redesigned Cinematic Feature Banners) -->
+    <!-- DJI Professional Standards Showcase -->
     <section class="border-t border-white/10 bg-gradient-to-b from-[#06080D] via-[#090D15] to-[#040609] py-24 relative overflow-hidden">
         <!-- Subtle Grid & Radial Glow Background -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(56,189,248,0.06)_0%,transparent_60%)] pointer-events-none"></div>
@@ -223,9 +231,9 @@
                 </p>
             </div>
 
-            <!-- Redesigned High-Impact Feature Cards (Asymmetric Layout with Visual Accents) -->
+            <!-- Redesigned High-Impact Feature Cards -->
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Card 01: Pre-Flight Calibration (Featured Highlight) -->
+                <!-- Card 01: Pre-Flight Calibration -->
                 <div class="group relative rounded-2xl bg-gradient-to-b from-white/[0.05] to-black/60 border border-white/10 p-8 hover:border-sky-400/50 transition-all duration-300 flex flex-col justify-between overflow-hidden shadow-2xl">
                     <div class="absolute top-0 right-0 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl pointer-events-none group-hover:bg-sky-500/20 transition duration-500"></div>
 
@@ -360,7 +368,7 @@
                 }, 120);
             }
             if (label) {
-                label.textContent = title;
+                label.innerHTML = '<span class="h-1.5 w-1.5 rounded-full bg-sky-400 inline-block mr-1.5"></span>' + title;
             }
             document.querySelectorAll('.thumb-btn-' + droneSlug).forEach(b => {
                 b.classList.remove('border-sky-400', 'ring-1', 'ring-sky-400/40', 'bg-sky-400/10');

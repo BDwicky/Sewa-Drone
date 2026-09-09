@@ -1,90 +1,90 @@
 {
   "dji-mini-4-pro": {
-    "primary_image": "https://www-cdn.djiits.com/dps/dc385ce60d2dc54ce4f90fde219e8eee.jpg",
+    "primary_image": "drones/mini4_front.jpg",
     "gallery": [
       {
-        "title": "Sudut Depan Gimbal",
-        "url": "https://www-cdn.djiits.com/dps/dc385ce60d2dc54ce4f90fde219e8eee.jpg"
+        "title": "Wujud Fisik Depan & Kamera",
+        "url": "/storage/drones/mini4_front.jpg"
       },
       {
-        "title": "Bodi Atas & Baling-baling",
-        "url": "https://www-cdn.djiits.com/dps/ebdbd394236cf23c1121557b30a6a625.jpg"
+        "title": "Bodi Atas & Propeller",
+        "url": "/storage/drones/mini4_side.jpg"
       },
       {
-        "title": "Sensor Omnidirectional Samping",
-        "url": "https://www-cdn.djiits.com/dps/de6c30339b786aa9bff988392d58dd81.jpg"
+        "title": "Detail Gimbal & Sensor",
+        "url": "/storage/drones/mini4_gimbal.jpg"
       },
       {
-        "title": "Posisi Terbang Melayang",
-        "url": "https://www-cdn.djiits.com/dps/a16da13bc83d979f4c847a9d2d86fab0.jpg"
+        "title": "Kondisi Terlipat Ringkas",
+        "url": "/storage/drones/mini4_folded.jpg"
       }
     ],
-    "video": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/07429eda-b4e9-426b-8b30-ac9d9a4df550.mp4"
+    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
   },
   "dji-air-3s": {
-    "primary_image": "https://www-cdn.djiits.com/dps/b423e3ee34c1e1c58c2c88e8e1214ded.jpg",
+    "primary_image": "drones/air3s_front.jpg",
     "gallery": [
       {
-        "title": "Dual Camera 1-inch CMOS",
-        "url": "https://www-cdn.djiits.com/dps/b423e3ee34c1e1c58c2c88e8e1214ded.jpg"
+        "title": "Wujud Fisik Depan",
+        "url": "/storage/drones/air3s_front.jpg"
       },
       {
-        "title": "Aerodinamika Depan",
-        "url": "https://www-cdn.djiits.com/dps/9d1b1a598a6d8e75f40bfd27ddd92205.jpg"
+        "title": "Dual-Camera Sensor",
+        "url": "/storage/drones/air3s_dual.jpg"
       },
       {
-        "title": "Sudut Perspektif Terbang",
-        "url": "https://www-cdn.djiits.com/dps/ac62e55ff638ca8a9a38cfb006829820.jpg"
+        "title": "Bodi & Lengan Motor",
+        "url": "/storage/drones/air3s_angle.jpg"
       },
       {
-        "title": "Detail Propeller & Arm",
-        "url": "https://www-cdn.djiits.com/dps/330cced015e6f89f36c4e67ed43b9a04.jpg"
+        "title": "Profil Samping",
+        "url": "/storage/drones/air3s_side.jpg"
       }
     ],
-    "video": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/90f3c86c-b764-4329-b7ef-5d1bc29afbd4.mp4"
+    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
   },
   "dji-mavic-3-pro": {
-    "primary_image": "https://www-cdn.djiits.com/dps/ade883d6f3a1e525445772fd9f9037d1.jpg",
+    "primary_image": "drones/mavic3_front.jpg",
     "gallery": [
       {
-        "title": "Triple Camera Hasselblad",
-        "url": "https://www-cdn.djiits.com/dps/ade883d6f3a1e525445772fd9f9037d1.jpg"
+        "title": "Wujud Fisik Depan",
+        "url": "/storage/drones/mavic3_front.jpg"
+      },
+      {
+        "title": "Triple Lensa Hasselblad",
+        "url": "/storage/drones/mavic3_lens.jpg"
       },
       {
         "title": "Bodi Kokoh Pro-Class",
-        "url": "https://www-cdn.djiits.com/dps/3bb52faaaf0e97c5cf08b1758dfc1d99.jpg"
+        "url": "/storage/drones/mavic3_body.jpg"
       },
       {
-        "title": "Lensa Tele & Wide Detail",
-        "url": "https://www-cdn.djiits.com/dps/1c59841f2cb3982c0e632dd0a1ba71d7.jpg"
-      },
-      {
-        "title": "Profil Samping Saat Manuver",
-        "url": "https://www-cdn.djiits.com/dps/260b65e192c841f7e77662250cf3860e.jpg"
+        "title": "Kamera & Pendaratan",
+        "url": "/storage/drones/mavic3_stand.jpg"
       }
     ],
-    "video": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/3b1057aa-7bdf-46b8-a310-f6c3e98ad8e8.mp4"
+    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
   },
   "dji-avata-2": {
-    "primary_image": "https://www-cdn.djiits.com/dps/1e7506e1b6a86a0a8c35ad5ca56bc4ad.jpg",
+    "primary_image": "drones/avata2_front.jpg",
     "gallery": [
       {
+        "title": "Wujud Fisik FPV Drone",
+        "url": "/storage/drones/avata2_front.jpg"
+      },
+      {
         "title": "Integrated Propeller Guard",
+        "url": "/storage/drones/avata2_guard.jpg"
+      },
+      {
+        "title": "Kamera Ultra-Wide 155\u00b0",
         "url": "https://www-cdn.djiits.com/dps/1e7506e1b6a86a0a8c35ad5ca56bc4ad.jpg"
       },
       {
-        "title": "Kamera FPV Ultra-Wide 155\u00b0",
+        "title": "Motion Controller & Body",
         "url": "https://www-cdn.djiits.com/dps/fdd52d8a68c7c1fe7782ecaf4479b550.jpg"
-      },
-      {
-        "title": "Desain Bodi Aerodinamis FPV",
-        "url": "https://www-cdn.djiits.com/dps/472f765b0f84f95e9d5ae6ee13567738.jpg"
-      },
-      {
-        "title": "Manuver Rendah & Agil",
-        "url": "https://www-cdn.djiits.com/dps/8623a097e7307f8c49e430b0214d2db7.jpg"
       }
     ],
-    "video": "https://www-cdn.djiits.com/reactor/assets/_next/static/videos/18f0bccd-067c-49d4-8de1-c6a16dc0c19e.mp4"
+    "video": "https://terra-1-g.djicdn.com/851d20f7b9f64838a34cd02351370894/OQ102%20shot%20on/M83_OQ102_10S_CLEAN_M_2400x1440-08.14.mp4"
   }
 }
